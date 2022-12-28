@@ -1,12 +1,12 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# paqueteNIV
+# paqueteMET
 
 <!-- badges: start -->
 <!-- badges: end -->
 
 El objetivo principal es el recopilar una serie de funciones e
-instructivos que serán utilizados en el curso Nivelatorio de 
+instructivos que serán utilizados en el curso Métodos y Simulación 
 Estadística 
 
 ## Installation
@@ -16,7 +16,7 @@ alojado en GitHub durante su etapa de elaboración.
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("dgonxalex80/paqueteNIV")
+devtools::install_github("dgonxalex80/paqueteMET")
 ```
 
 ## Examplo
@@ -24,5 +24,5 @@ devtools::install_github("dgonxalex80/paqueteNIV")
 Con el siguiente comando carga las funciones del paquete:
 
 ``` r
-library(paqueteNIV)
+library(paqueteMET)
 ```

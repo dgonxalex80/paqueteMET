@@ -1,6 +1,6 @@
-#' @title Tiempos carrera de la Luz Cali 2022
+#' Tiempos carrera de la Luz Cali 2022
 #'
-#' @description Información sobre los tiempo de la carrera de La Luz Cali 2022.
+#' Información sobre los tiempo de la carrera de La Luz Cali 2022.
 #'
 #' @format Una base de dstos con  1922 fila y 7 variables:
 #' \describe{
@@ -12,5 +12,6 @@
 #'   \item{categoria}{categoría del corredor segun su edad.}   
 #'   \item{nacionalidad}{nacionalidad del corredor.}
 #' }
-#' @source <https://www.athlinks.com/event/212331/results/Event/1031677/Results>
+#' @examples
+#'   CarreraLuz22
 "CarreraLuz2022"

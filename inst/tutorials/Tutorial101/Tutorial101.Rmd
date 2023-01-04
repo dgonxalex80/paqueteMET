@@ -1,0 +1,94 @@
+---
+title: "Indicadores estadísticos"
+author: Métodos y Simulación Estadística
+output: 
+  learnr::tutorial:
+  css: css/learnr_metadocencia.css
+progressive: true # los encabezados de tercer nivel (###) son revelados progresivamente
+allow_skip: true # permite saltearse los ejercicios. 
+language:
+  es: tutorial_es.json
+description: "Tutorial interactivo indicadores descriptivos" # Esta descripción se ve en el panel Tutorial de RStudio 
+runtime: shiny_prerendered
+---
+  
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE,
+                      exercise.warn_invisible = FALSE)
+# colores
+c1="#FF7F00" # NARANJA COLOR PRINCIPAL
+c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO  
+c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
+c4="#686868" # GRIS COLOR TEXTO 
+
+```
+
+## **PRESENTACIÓN**
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("images/banner2.png")
+```
+
+El presente tutorial contiene preguntas relacionadas con , 
+conceptos importantes en 
+
+</br>
+  
+### **CONCEPTOS**
+  
+</br></br>
+
+### **MAPA** 
+  
+
+```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
+knitr::include_graphics("images/Indicadores.png")  
+
+```
+
+## **CUESTIONARIO**
+
+```{r quiz_1}
+
+quiz(
+  question("¿Pregunta?", 
+           correct = "Respuesta y explicación!, .", 
+           allow_retry = TRUE,
+           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("opción 2", message = "Nop...intentalo de nuevo!"),
+           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
+           answer("opción 4", correct = TRUE),
+           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+           submit_button = "Enviar respuesta",
+           try_again_button = "Intentar de nuevo"),
+  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+  caption = "Visualización"
+)
+
+```
+
+
+
+
+
+
+## **PROBLEMAS**
+
+Enunciado
+
+```{r p1, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p1-hint}
+
+
+```
+
+
+```{r p1-solution}
+
+```

@@ -1,6 +1,6 @@
 ---
 title: "**VARIABLE ALEATORIA**"
-author: Nivelatorio de Estadística
+author: Métodos y Simulación Estadística
 output: 
   learnr::tutorial:
     css: css/learnr_metadocencia.css
@@ -34,11 +34,11 @@ conceptos importantes en
 
 </br>
   
-### **CONCEPTOS**
+#### **CONCEPTOS**
   
 </br></br>
 
-### **MAPA** 
+#### **MAPA** 
   
 
 ```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
@@ -53,13 +53,13 @@ knitr::include_graphics("images/variables.png")
 ```{r quiz_1}
 
 quiz(
-  question("¿Pregunta?", 
+  question("En relación con la distribución normal, ¿Cuál de las siguientes afirmaciones es falsa?:", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Es una distribución de probabilidad teórica discreta.", correct = TRUE),
+           answer("La distancia entre el eje vertical trazado en la media y el punto de inflexión de la curva es la desviación estándar.", message = "Nop...intentalo de nuevo!"),
+           answer("Es simétrica y unimodal.", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Cualquier valor entre – infinito y + infinito es teóricamente posible.", message = "Cerca, pero no...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),

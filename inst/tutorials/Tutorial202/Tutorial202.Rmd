@@ -1,6 +1,6 @@
 ---
 title: "**SIMULACIÓN ESTADÍSTICA**"
-author: Nivelatorio de Estadística
+author: Métodos y Simulación Estadística
 output: 
   learnr::tutorial:
     css: css/learnr_metadocencia.css
@@ -35,11 +35,11 @@ conceptos importantes en
 
 </br>
   
-### **CONCEPTOS**
+#### **CONCEPTOS**
   
 </br></br>
 
-### **MAPA** 
+#### **MAPA** 
   
 
 ```{r, echo=FALSE, , out.width="100%", fig.align = "center"}

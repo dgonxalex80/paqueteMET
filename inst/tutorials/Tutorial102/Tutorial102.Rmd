@@ -1,6 +1,6 @@
 ---
 title: "**PROBABILIDAD**"
-author: Nivelatorio de Estadística
+author: Métodos y Simulación Estadística
 output: 
   learnr::tutorial:
     css: css/learnr_metadocencia.css
@@ -39,13 +39,14 @@ conceptos importantes en
   
 </br></br>
 
-### **MAPA** 
+#### **MAPA** 
   
 
 ```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
 knitr::include_graphics("images/tablas.png")  
 
 ```
+
 ## **CUESTIONARIO**
 
 ### **Pregunta 1**
@@ -53,13 +54,13 @@ knitr::include_graphics("images/tablas.png")
 ```{r quiz_1}
 
 quiz(
-  question("¿Pregunta?", 
+  question("La suma de las frecuencias relativas correspondientes a todos los valores de una variable es:", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("1", correct = TRUE), 
+           answer("100", message = "No, ...intentalo de nuevo!"),
+           answer("n, tamaño de la muestra", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Ninguna de las anteriores" , message = "Incorrecto...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),

@@ -1,6 +1,6 @@
 ---
 title: "**INDICADORES ESTADÍSTICOS**"
-author: Nivelatorio de Estadística
+author: Métodos y Simulación Estadística
 output: 
   learnr::tutorial:
     css: css/learnr_metadocencia.css
@@ -24,7 +24,7 @@ c4="#686868" # GRIS COLOR TEXTO
 
 ```
 
-## **PRESENTACIÓN**
+# **PRESENTACIÓN**
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("images/banner2.png")
@@ -34,13 +34,13 @@ El presente tutorial contiene preguntas relacionadas con , el resumen de datos a
 
 </br></br>
 
-### **CONCEPTOS**
+## **CONCEPTOS**
 
 Cuando realizamos un análisis datos es necesario el cálculo de indicadores que faciliten su interpretación
 
 </br></br>
 
-#### **INDICADORES DE POSICIÓN**
+### **INDICADORES DE POSICIÓN**
 
 Estan conformado por un grupo de datos que permiten realizar comparaciones de un dato con respecto al grupo. Dentro de ellos se destacan : percentiles., deciles, quintiles, cuartiles  Con los cuartiles se construye el diagrama de cajas
 
@@ -53,7 +53,7 @@ Estan conformado por un grupo de datos que permiten realizar comparaciones de un
 
 </br></br>
 
-#### **INDICADORES DE CENTRO**
+### **INDICADORES DE CENTRO**
 
 Los indicadores de centro resumen en un solo número el conjunto de datos. Dentre de ellos se destacan : la media, mediana, moda, rango medio, media truncada
 
@@ -69,7 +69,7 @@ Los indicadores de centro resumen en un solo número el conjunto de datos. Dentr
 
 </br></br>
 
-#### **INDICADORES DE DISPERSIÓN**
+### **INDICADORES DE DISPERSIÓN**
 
 Conformado por un grupo de indicadores que nos muestran la variabilidad de los datos. Los principales indicadores de dispersión son : el rango, la varianza, la desviación estandar y el coeficiente de variación.
 
@@ -83,7 +83,7 @@ Conformado por un grupo de indicadores que nos muestran la variabilidad de los d
 
 </br></br>
 
-#### **INDICADORES DE FORMA**
+### **INDICADORES DE FORMA**
 
 Los indicadores de forma permiten analizar los datos respecto a su distribución que tiene dos dimensiones : el apuntamiento o curtosis y la asimetria o sesgo
 
@@ -113,13 +113,13 @@ knitr::include_graphics("images/Indicadores.png")
 ```{r quiz_1}
 
 quiz(
-  question("¿Pregunta?", 
+  question("En un conjunto de 26 valores de una variable aumentamos 5 unidades a los 3 valores más altos. Entonces no varía:", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("La media aritmética", message = "No, pero intentalo de nuevo!"),
+           answer("El percentil 98", message = "Nop...intentalo de nuevo!"),
+           answer("La mediana", message = "Incorrecto. Intenta de nuevo!."),
+           answer("El percentil 95", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -135,13 +135,13 @@ quiz(
 ```{r quiz_2}
 
 quiz(
-  question("¿Pregunta?", 
+  question("Si a todos los valores de una variable les sumamos una constante positiva m entonces :", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("La nueva media aumenta en esa constante m", correct = TRUE),
+           answer("La nueva media disminuye en esa constante m", message = "No...intentalo de nuevo!"),
+           answer("La nueva media queda multiplicada por esa constante m", message = "Incorrecto. Intenta de nuevo!."),
+           answer("La nueva media no varia", message = "No, pero intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -157,13 +157,13 @@ quiz(
 ```{r quiz_3}
 
 quiz(
-  question("¿Pregunta?", 
+  question("Al mirar las notas de Estadística observas que de los 120 alumnos de la lista sólo te superan en nota 14. Puedes decir con razón que:", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("He superado el noveno decil", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("Mi nota es el percentil 91", message = "Nop...intentalo de nuevo!"),
+           answer("He superado el percentil 85", correct = TRUE),
+           answer("Ninguna de las anteriores", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -200,13 +200,13 @@ quiz(
 ```{r quiz_5}
 
 quiz(
-  question("¿Pregunta?", 
+  question("¿Si a todos los valores de una variable les sumamos una constante positiva m entonces,", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("La nueva varianza aumenta en esa constante m", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("La nueva varianza disminuye en esa constante m", message = "Nop...intentalo de nuevo!"),
+           answer("La nueva varianza queda multiplicada por esa constante m", message = "Incorrecto. Intenta de nuevo!."),
+           answer("La nueva varianza no varia", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -222,13 +222,13 @@ quiz(
 ```{r quiz_6}
 
 quiz(
-  question("¿Pregunta?", 
+  question("La desviación estandar", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Es un indicador de variabilidad de los datos", correct = TRUE),
+           answer("Es un indicador de tendencia central", message = "No...intentalo de nuevo!"),
+           answer("Es un indicador de posición de los datos", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Es un indicador de forma de los datos", message = "No.....intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),

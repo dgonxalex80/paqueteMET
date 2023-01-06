@@ -4,7 +4,7 @@
 #' @param niv.conf nivel de confianza . p.ej:95
 #' @return ic.var intervalo de confiaza para una varianza
 #' @export intervalo.var
-#' @importFrom  stats  qchisq var
+#' @importFrom stats, qchisq, var    
 #' @examples intervalo.var(c(3,4,3,2,3,4,5),0.95)
 # '
 

@@ -1,6 +1,6 @@
 ---
 title: "**INFERENCIA ESTADÍSTICA**"
-author: Nivelatorio de Estadística
+author: Métodos y Simulación Estadística
 output: 
   learnr::tutorial:
     css: css/learnr_metadocencia.css
@@ -35,11 +35,11 @@ conceptos importantes en
 
 </br>
   
-### **CONCEPTOS**
+#### **CONCEPTOS**
   
 </br></br>
 
-### **MAPA** 
+#### **MAPA** 
   
 
 ```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
@@ -54,13 +54,13 @@ knitr::include_graphics("images/inferencia.png")
 ```{r quiz_1}
 
 quiz(
-  question("¿Pregunta?", 
+  question("¿La muestra es un subconjunto de la población que..", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Es necesaria tener para hacer estadística", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("Es lo más representativo de la población", message = "Nop...intentalo de nuevo!"),
+           answer("Es un subconjunto extraido al azar de la población", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Es seleccionada para estimar un parámetro de interés de la población 4", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -76,13 +76,13 @@ quiz(
 ```{r quiz_2}
 
 quiz(
-  question("¿Pregunta?", 
+  question("El tamaño de muestra", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Es proporcional al tamaño de la población 1", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("Es el 5% del tamaño de la población", message = "Nop...intentalo de nuevo!"),
+           answer("Se calcula sobre la base de la estratificación", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Depende de la dispersión de la población", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -141,13 +141,13 @@ quiz(
 ```{r quiz_5}
 
 quiz(
-  question("¿Pregunta?", 
+  question("En el muestreo", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("No debe haber error", message = "No...intentalo de nuevo!"),
+           answer("Es importante conseguir un tamaño de muestra grande", message = "Nop...intentalo de nuevo!"),
+           answer("Se calculael tamaño óptimo para un determinado nivel de error", correct = TRUE),
+           answer("El error no debe superar el 3%", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -163,13 +163,13 @@ quiz(
 ```{r quiz_6}
 
 quiz(
-  question("¿Pregunta?", 
+  question("El nivel de significación o de significancia es la probabilidad de:", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Rechazar Ho, cuando ésta es falsa", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("Rechazar Ho, cuando ésta es verdadera", correct = TRUE),
+           answer("No rechazar Ho, cuando Ho es falsa", message = "Incorrecto. Intenta de nuevo!."),
+           answer("No rechazar Ho, cuando Ho es verdadera", message = "Nop...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -185,13 +185,13 @@ quiz(
 ```{r quiz_7}
 
 quiz(
-  question("¿Pregunta?", 
+  question("Respecto a las pruebas de hipótesis señale lo falso:", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Es un procedimiento por el cual nos decidimos por la hipótesis nula (Ho) o por la alternativa (Ha).", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("La Ha es la que se pone a prueba al realizar una prueba estadística.", message = "Nop...intentalo de nuevo!"),
+           answer("La Ha es al que se aceptará si el resultado de la prueba permite rechazar la Ho.", message = "Incorrecto. Intenta de nuevo!."),
+           answer("La significancia estadística es la condición resultante del rechazo de la Ho.", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),

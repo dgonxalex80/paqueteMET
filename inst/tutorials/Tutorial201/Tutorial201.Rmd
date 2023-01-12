@@ -29,8 +29,7 @@ c4="#686868" # GRIS COLOR TEXTO
 knitr::include_graphics("images/banner2.png")
 ```
 
-El presente tutorial contiene preguntas relacionadas con , 
-conceptos importantes en 
+El presente tutorial contiene preguntas relacionadas con los temas abordados en la Unidad 2 sobre Variable Aleatoria, conceptos importantes para la compresión de la Inferencia Estadística.
 
 </br>
   

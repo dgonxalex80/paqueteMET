@@ -349,7 +349,7 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 * **edad**: edad en años del atleta
 * **origen**: Ciudad de origen
 * **timerum**: tiempo de carrera en segundos
-* **categoría**: 1. Juvenil, 2. Abuerta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
+* **categoría**: 1. Juvenil, 2. Abierta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
 * **nacionalidad**: nacionalidad del atleta
 
 Calcule los indicadores de centro para el tiempo de carrera de todos los participantes en minutos
@@ -393,7 +393,7 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 * **edad**: edad en años del atleta
 * **origen**: Ciudad de origen
 * **timerum**: tiempo de carrera en segundos
-* **categoría**: 1. Juvenil, 2. Abuerta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
+* **categoría**: 1. Juvenil, 2. Abierta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
 * **nacionalidad**: nacionalidad del atleta
 
 Se requiere saber si en promedio los hombre de la categoria `3. Veteranos A` registraron menor tiempo que las mujeres en la categoria `2. Abierta` 
@@ -478,7 +478,7 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 * **edad**: edad en años del atleta
 * **origen**: Ciudad de origen
 * **timerum**: tiempo de carrera en segundos
-* **categoría**: 1. Juvenil, 2. Abuerta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
+* **categoría**: 1. Juvenil, 2. Abierta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
 * **nacionalidad**: nacionalidad del atleta
 
 Ahora se requiere calcular las medias para todas las categoria en hombre y en mujeres
@@ -525,7 +525,7 @@ El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atl
 * **edad**: edad en años del atleta
 * **origen**: Ciudad de origen
 * **timerum**: tiempo de carrera en segundos
-* **categoría**: 1. Juvenil, 2. Abuerta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
+* **categoría**: 1. Juvenil, 2. Abierta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
 * **nacionalidad**: nacionalidad del atleta
 
 Que diferencias existe entre las funciones:

@@ -1,5 +1,5 @@
 ---
-title: "**PROBABILIDAD**"
+title: "**TABLAS DE FRECUENCIA**"
 author: Métodos y Simulación Estadística
 output: 
   learnr::tutorial:
@@ -24,19 +24,80 @@ c4="#686868" # GRIS COLOR TEXTO
 
 ```
 
+</br>
+
 ## **PRESENTACIÓN**
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("images/banner2.png")
 ```
 
-El presente tutorial contiene preguntas relacionadas con , 
-conceptos importantes en 
+</br>
+
+El presente tutorial contiene preguntas relacionadas con la construcción y análisis de las distribuciones de frecuencia a través de tablas, 
+conceptos importantes en el análisis decriptivo de datos
 
 </br>
   
 ### **CONCEPTOS**
+
+</br>
+
+#### **VARIABLES CUALITATIVAS**
+
+El resumen de datos para variables cualitativs se centra en la construcción de tablas de frecuencia. Dependiendo si la variable es medida en escala nominal u ordinal la tabla presenta o no las frecuencias acumuladas
+
+</br></br>
+
+#### **FRECUENCIA ABSOLUTA**
+
+$f_{i}$ : frecuencia absoluta que consiste en el conteo para cada uno de los valores distintos que toma la variable. La suma total de frecuencias absolutas debe ser igual al total de datos. $\sum_{i=1}^{n} f_{i} = n$
+
+</br></br>
+
+#### **FRECUENCIA RELATIVA**
+
+$h_{i}$ : la frecuencia relativa corresponde al porcentaje de cada nivel que se obtiene al dividir  $h_{i}/n \times 100\%$ . La suma total de frecuencias relativas debe ser igual a uno. $\sum_{i=1}^{n} h_{i} = 1.00$  
   
+</br></br>
+
+#### **FRECUENCIA ABSOLUTA ACUMULADA**
+
+$F_{i}$ : la frecuencia absoluta acumulada se obtiene al sumar las frecuencias absolutas de niveles menores o iguales al nivel correspondiente. $F_{j} = \sum_{i=1}^{j} f_{i}$. $F_{1} = f_{1}$, $F_{2} = f_{1}+ f_{2}$, $F_{3} = f_{1}+ f_{2} +f_{3}$, ....., $F_{n} = f_{1}+ f_{2}....+f_{m} = n$. Siendo $m$ el número de niveles o valores diferentes que tiene la variable.  
+
+</br></br>
+
+#### **FRECUENCIA RELATIVA ACUMULADA**
+
+
+$H_{i}$ : la frecuencia relativa acumulada que corresponde al porcentaje acumulado hasta el nivel correspondiente. $H_{j} = \sum_{i=1}^{j} h_{i}$. $H_{1} = h_{1}$, $H_{2} = h_{1}+ h_{2}$, $H_{3} = h_{1}+ h_{2} + h_{3}$, ....., $H_{m} = h_{1}+ h_{2}....+ h_{m} = 1.00$. Siendo $m$ el número de niveles o valores diferentes que tiene la variable.  
+
+</br></br>
+
+#### **VARIABLES CUANTITATIVAS**
+
+En el caso de variables cuantitativas la construcción de tablas requiere la recodificación de la variable en intervalos con las siguientes columnas
+
+|i      |límite inferior |límite superior |marca de clase  |frecuencia absoluta|frecuencia relativa|frecuencia absoluta acumulada|frecuencia relativa acumulada|
+|:------|:---------------|:---------------|:---------------|:------------------|:------------------|:----------------------------|:----------------------------|
+|$1$    |$L_{0}$         |  $L_{1}$       |   $x_{1}^{'}$  |    $f_{1}$        |    $h_{1}$        |    $F_{1}$                  |      $H_{1}$                |
+|$2$    |$L_{1}$         |  $L_{2}$       |   $x_{2}^{'}$  |    $f_{2}$        |    $h_{2}$        |    $F_{2}$                  |      $H_{2}$                |
+|$3$    |$L_{2}$         |  $L_{3}$       |   $x_{3}^{'}$  |    $f_{3}$        |    $h_{3}$        |    $F_{3}$                  |      $H_{3}$                |
+|$4$    |$L_{3}$         |  $L_{4}$       |   $x_{4}^{'}$  |    $f_{4}$        |    $h_{4}$        |    $F_{4}$                  |      $H_{4}$                |
+|       |                |                |                |                   |                   |                             |                             |
+|$i$    |$L_{i-1}$       |  $L_{i}$       |   $x_{i}^{'}$  |    $f_{i}$        |    $h_{i}$        |    $F_{i}$                  |      $H_{i}$                |
+|       |                |                |                |                   |                   |                             |                             |
+|$m$    |$L_{m-1}$       |  $L_{m}$       |   $x_{m}^{'}$  |    $f_{m}$        |    $h_{m}$        |    $n$                      |      $1.00$                 |
+
+
+
+</br></br>
+
+#### **TABLAS DE DOBLE ENTRADA, TABLAS CRUZADAS o TABLAS DE CONTINGENCIA**
+
+Estas tabla son de utilidad cuando se requiere el analisis bivariado de dos variables cualitativas. Se denominan tambien tablas de doble entrada debido a las columnas representan los niveles de una variable, mientras que las filas representan los niveles de la segunda variable.
+
+
 </br></br>
 
 #### **MAPA** 
@@ -55,10 +116,10 @@ knitr::include_graphics("images/tablas.png")
 
 quiz(
   question("La suma de las frecuencias relativas correspondientes a todos los valores de una variable es:", 
-           correct = "Respuesta y explicación!, .", 
+           correct = "Correcto!. La suma de las frecuencias relativas es uno, pero se lee en porcentaje.", 
            allow_retry = TRUE,
            answer("1", correct = TRUE), 
-           answer("100", message = "No, ...intentalo de nuevo!"),
+           answer("100", message = "Cerca, pero no,...intentalo de nuevo!"),
            answer("n, tamaño de la muestra", message = "Incorrecto. Intenta de nuevo!."),
            answer("Ninguna de las anteriores" , message = "Incorrecto...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -73,16 +134,25 @@ quiz(
 
 ### **Pregunta 2**
 
-```{r quiz_2}
+la siguiente tabla resume los datos recogidos en una encuesta sobre calidad de vida. El estudio recogió información de 900 personas sobre:
 
+$A$ : realiza actividad de portiva
+$B$ : se alimenta de manera saludable
+
+```{r, echo=FALSE, , out.width="40%", fig.align = "center"}
+knitr::include_graphics("images/tabla2.png")  
+```
+
+
+```{r quiz_2}
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("¿No podemos afirmar de acuerdo con la anterior información, que:", 
+           correct = "Correcto|, 300/900= 0.33. Esto significa que el 33.% no realiza actividad deportiva", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Un poco más de la mitad se alimenta saludablemente", message = "No...intentalo de nuevo!"),
+           answer("El 51% de los encuestados se alimenta saludablemente y realiza actividad deportiva", message = "No...intentalo de nuevo!"),
+           answer("El 30% de los encuestados no realiza actividad deportiva", correct = TRUE),
+           answer("El 29% de los encuestados no tiene habitos saludables", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -95,16 +165,45 @@ quiz(
 
 ### **Pregunta 3**
 
+La siguiente información corresponde a la distribución de los atletas que perticiparon en la carrera 10K La Luz en Cali en el 2022.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(paqueteMET)
+library(tidyverse)
+data("CarreraLuz22")
+# install.packages("flextable")
+library(flextable)
+ft1=table(CarreraLuz22$categoria)%>% 
+as.data.frame()
+colnames(ft1)=c("Categoría", "Frecuencia absoluta")
+ft1=flextable(ft1)
+
+set_flextable_defaults(
+font.size = 12, font.family = "Helvetica",
+font.color = "#686868",
+table.layout = "fixed",
+border.color = "gray",
+padding.top = 3, padding.bottom = 3,
+padding.left = 4, padding.right = 4)
+
+ft1 <- ft1 %>%
+width(j = 1,  width = 2) %>%
+width(j = 2, width = 1)
+ft1
+```
+
+
+
 ```{r quiz_3}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("De la anterior información podemos afirmar que: ", 
+           correct = "Correcto!, 423/1922 = 0.2200832. El 22% de los participantes pertenecen a la categoría Veteranos A", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Los participantes en la categoría Veteranos A constituyen el  22% del  grupo", correct = TRUE),
+           answer("Los participantes en la categorá Abierta conforman el 70% del grupo", message = "No...intentalo de nuevo!"),
+           answer("La media de la variable es 1179", message = "Incorrecto. Intenta de nuevo!."),
+           answer("El dato atípico lo constituye la categoría Juvenil con 19 participantes", message = "No...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -119,13 +218,13 @@ quiz(
 ```{r quiz_4}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("Cuando se requiere construir una tabla de frecuencias a partir de una variables cualititativa en escala nominal, se deben incluir: ", 
+           correct = "Correcto, aunque en algunas publicaciones solo aparezca una de las frecuencias, lo correcto es aparezcan las dos columnas.", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Las frecuencias absolutas y las frecuencias absolutas acumuladas ", message = "No,...intentalo de nuevo!"),
+           answer("Las frecuencias absolutas y relativas", correct = TRUE),
+           answer("Las frecuencias absolutas y relativas y tambien las frecuencias acumuladas", message = "Incorrecto. Intenta de nuevo!."),
+           answer("Solo las frecuencias relativas", message = "No...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -141,13 +240,13 @@ quiz(
 ```{r quiz_5}
 
 quiz(
-  question("¿Pregunta?", 
+  question("Para el caso de las variables cualitativas es necesario agrupar los valores en intervalos siguiendo los siguientes criterios :", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("Siempre debe tomar intervalos de igual longitud", message = "No, pero...intentalo de nuevo!"),
+           answer("En todos los casos la función de R hace el proceso mediante la regla de Sturges", message = "No...intentalo de nuevo!"),
+           answer("Es necesario analizar el contexto para tomar una decisión, es decir depende si el resultado se compara con resultados anteriore o si existe una clasificacion natural de la variable", correct = TRUE),
+           answer("Ninguna de las anteriores", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -156,334 +255,151 @@ quiz(
 )
 
 ```
-
-
-### **Pregunta 6**
-
-```{r quiz_6}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
-
-### **Pregunta 7**
-
-```{r quiz_7}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
-
-### **Pregunta 8**
-
-```{r quiz_8}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
-
-### **Pregunta 9**
-
-```{r quiz_9}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
-
-### **Pregunta 10**
-
-```{r quiz_10}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
 
 ## **PROBLEMAS**
 
 
 ### **Problema 1**
 
-Enunciado
+El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+
+* **sex** : sexo del atleta : Hombre, Mujer 
+* **edad**: edad en años del atleta
+* **origen**: Ciudad de origen
+* **timerum**: tiempo de carrera en segundos
+* **categoría**: 1. Juvenil, 2. Abierta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
+* **nacionalidad**: nacionalidad del atleta
+
+Construya una tabla que permita  el análisis de la variable categoria por sexo
 
 ```{r p1, exercise=TRUE, exercise.lines = 5}
-
+library(paqueteMET)
+data("CarreraLuz22")
 
 ```
 
 
 ```{r p1-hint}
-
-
+library(paqueteMET)
+data("CarreraLuz22")
+table()
 ```
 
 
 ```{r p1-solution}
-
+library(paqueteMET)
+data("CarreraLuz22")
+table(CarreraLuz22$categoria, CarreraLuz22$sex)
 ```
 
 
 
 ### **Problema 2*
 
-Enunciado
+El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+
+* **sex** : sexo del atleta : Hombre, Mujer 
+* **edad**: edad en años del atleta
+* **origen**: Ciudad de origen
+* **timerum**: tiempo de carrera en segundos
+* **categoría**: 1. Juvenil, 2. Abierta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
+* **nacionalidad**: nacionalidad del atleta
+
+Qué porcentaje de las mujeres conforman  la categoría Abierta?
 
 ```{r p2, exercise=TRUE, exercise.lines = 5}
-
+library(paqueteMET)
+data("CarreraLuz22")
 
 ```
 
 
 ```{r p2-hint}
-
-
+library(paqueteMET)
+data("CarreraLuz22")
+table(CarreraLuz22$categoria, CarreraLuz22$sex)
 ```
 
 
 ```{r p2-solution}
+library(tidyverse)
+library(paqueteMET)
+data("CarreraLuz22")
+table(CarreraLuz22$categoria, CarreraLuz22$sex) %>% 
+  prop.table(.,2)
 
 ```
 
 
 ### **Problema 3**
 
-Enunciado
+El paquete paqueteMET contiene información de los tiempo obtenidos por 1922 atletas que participaron en la carrera de La Luz en 2022 en Cali. 
+
+* **sex** : sexo del atleta : Hombre, Mujer 
+* **edad**: edad en años del atleta
+* **origen**: Ciudad de origen
+* **timerum**: tiempo de carrera en segundos
+* **categoría**: 1. Juvenil, 2. Abierta, 3. Veteranos A, 4. Veteranos B, 5. Veteranos C
+* **nacionalidad**: nacionalidad del atleta
+
+Las categírias estan delimidatas por rango de edades así
+| Categoría   | Rango de edad                      |  
+|:-----------:|:-----------------------------------|
+| Juvenil     |  menos de 18 años                  |
+| Abierta     |  de 18 a menos de 40 años          |
+| Veteranos A |  de 40 a menos de 50 años          |
+| Veteranos B |  de 50 a menos de 60 años          |
+| Veteranos C |  60 o más años                     |
+
+Verifique que las categorías cumplen estos rangos
+
 
 ```{r p3, exercise=TRUE, exercise.lines = 5}
-
+library(paqueteMET)
+data("CarreraLuz22")
 
 ```
 
 
 ```{r p3-hint}
-
-
+library(paqueteMET)
+data("CarreraLuz22")
+breaks=c(10,18,40,50,60,80)    # limites de intervalos
+Edad.corredores=cut(CarreraLuz22$edad, breaks)
+table(Edad.corredores, CarreraLuz22$categoria)
 ```
 
 
 ```{r p3-solution}
-
+library(paqueteMET)
+data("CarreraLuz22")
 ```
 
 
 
 ### **Problema 4**
 
-Enunciado
+Ahora se requiere que construya una tabla con los tiempos en minutos por rangos de 15 minutos ( (30 a 60); [60 a 90); [90 a 120 ), [120 a 150); [150 a 180] )
 
 ```{r p4, exercise=TRUE, exercise.lines = 5}
-
+library(paqueteMET)
+data("CarreraLuz22")
 
 ```
 
 
 ```{r p4-hint}
-
-
+library(paqueteMET)
+breaks=c( )     # limites de intervalos
+tiempos.R=cut(CarreraLuz22$ , breaks)
+table()
 ```
 
 
 ```{r p4-solution}
-
-```
-
-
-
-### **Problema 5**
-
-Enunciado
-
-```{r p5, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p5-hint}
-
-
-```
-
-
-```{r p5-solution}
-
-```
-
-
-
-### **Problema 6**
-Enunciado
-
-```{r p6, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p6-hint}
-
-
-```
-
-
-```{r p6-solution}
-
-```
-
-
-
-### **Problema 7**
-
-Enunciado
-
-```{r p7, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p7-hint}
-
-
-```
-
-
-```{r p7-solution}
-
-```
-
-
-
-### **Problema 8**
-
-Enunciado
-
-```{r p8, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p8-hint}
-
-
-```
-
-
-```{r p8-solution}
-
-```
-
-
-
-### **Problema 9**
-
-Enunciado
-
-```{r p9, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p9-hint}
-
-
-```
-
-
-```{r p9-solution}
-
-```
-
-
-
-### **Problema 10**
-
-Enunciado
-
-```{r p10, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p10-hint}
-
-
-```
-
-
-```{r p10-solution}
-
+library(paqueteMET)
+breaks=c(30,59.9,89.9,119.9,149.9,180 )     # limites de intervalos
+tiempos.R=cut(CarreraLuz22$timerun/60 , breaks)
+summarytools::freq(tiempos.R)
 ```
 

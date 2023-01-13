@@ -26,7 +26,7 @@ c4="#686868" # GRIS COLOR TEXTO
 
 ## **PRESENTACIÓN**
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
 knitr::include_graphics("images/banner2.png")
 ```
 
@@ -36,7 +36,38 @@ conceptos importantes en
 </br>
   
 #### **CONCEPTOS**
-  
+
+Dependiendo de el tipo de variable y el tipo de escala se elige el tipo de gráfica a utilizar para la representación de la variable.
+
+
+|Tipo de variable | Tipos de escala  |  Tipo de gráfico            |  Sintaxis R            | 
+|:----------------|:-----------------|:----------------------------|:-----------------------|
+| cualitativa     | nominal          |  diagrama de torta          |  `pie(table(x))`       |
+|                 | ordinal          |  diagrama de barras         |  `barplot(table(x))`   |
+|cualitativa-cualitativa|            |  diag.barras dobles         |  `barplot(table(x,y))` |
+|cualitativa-cualitativa|            |  diag. mosaico              |  `plot(x,y)`           |
+
+</br>
+
+|                 |                  |                             |                        |
+|:----------------|:-----------------|:----------------------------|:-----------------------|
+|cuantitativa     | intervalo/ razón |  diagrama de tallos y hojas | `stem(x)`              |
+|                 | intervalo/ razón |  histograma                 | `hist(x)`              | 
+|                 | intervalo/ razón |  diagrama de puntos         | `plot(x,y)`            |
+|                 | intervalo/ razón |  diagrama de densidad       | `density(x)`           |
+|                 | intervalo/ razón |  diagrama de cajas          | `boxplot(x)`           |
+|                 | intervalo/ razón |  diagrama de linea          | `plot(x, type="l")`    |
+| cuantitativa-cuantitativa| intervalo/ razón| diagrama de dispersión| `plot(x,y)`                        |
+
+</br>
+
+**Nota**: Además de estas formas de representación gráfica existen otras formas que combinan variables como:
+
++ Mapas
++ Diagrama de Mosaico
++ Diagramas de radar
++ Diagrama likert
+
 </br></br>
 
 #### **MAPA** 

@@ -33,11 +33,114 @@ El presente tutorial contiene preguntas relacionadas con los temas abordados en 
 
 </br>
   
-#### **CONCEPTOS**
+### **CONCEPTOS**
+
+</br>
+
+##### **VARIABLE ALEATORIA**
+
+Una variable aleatoria $X$ es una función que asigna a cada valor de un espacio muestral $S$ un número . El conjunto formado por estos números conforman un subconjunto de los  reales llamado rango de la variable X, ($R_{_{X}}$). Asociado a cada número se define un valor de probabilidad a través de $f(x)$. 
+
+</br>
+
+#### **VARIABLES DISCRETAS**
+
+Una variable $X$ se considera **DISCRETA** si su rango $R_{_{X}}$ es un conjunto finito o infinito numerable de valores.
+
+</br>
+
+#### **VARIABLES CONTINUAS**
+
+Se considera **CONTINUA** si su rango $R_{_{X}}$ es un conjunto de valores infinito no numerable y generalmente corresponde a unión de intervalos.
+
+</br>
+
+#### **FUNCIÓN DE DISTRIBUCIÓN DE PROBABILIDAD**
+
+Para $X$ un variable aleatoria discreta, su función de distribución de probabilidad estará dada por $f(x)$, la cual proporciona las probabilidades asociadas a todos los valores de su rango $R_{X}$ . Esta función debe cumplir las siguientes propiedades: ($i$) $f(x) = P(X=x) \geq 0$, ($ii$) $\sum_{R_X} f(x) = 1$
+
+</br>
+
+#### **FUNCIÓN DE DENSIDAD DE PROBABILIDAD**
+
+Para el caso de las variables aleatorias continuas se define como función de densidad de probablidad a $f(x)$, tal que cumpla las siguientes condiciones: ($i$) $f(x) \geq 0$, ($ii$) $\int\limits_{-\infty}^{+\infty}f(x)\:dx =1$. 
+Además se define : $P(a < X < b)=\int\limits_{a}^{b}f(x)\:dx$
+
+</br>
+
+#### **FUNCIÓN DE PROBABILIDAD ACUMULADA**
+
+Para $X$ una variable aleatoria continua con función de densidad $f_{X}(x)$, se define la  función de distribución acumulada, $F_{X}(x)$, como: 
+
+Caso discreto
+$$F(x)=P(X\leq x)=\sum _{t \leq x}f(t)$$ 
+Caso continuo
+$$F_{_{X,Y}}(x,y) = P(X\leq x; Y \leq y) = \int_{-\infty}^{x} \int_{-\infty}^{y} f(s,t) \:ds \:dt$$
+</br>
+
+#### **VALOR ESPERADO**
+
+Sea $X$ una variable aleatoria discreta o continua. La esperanza matemática de $X$ o valor esperado, $E(X)$ o bien $\mu$, se define respectivamente como: 
+
+</br>
+
+Caso discreto
+$$E(X) = \sum\limits_{x}^{}x_{i}f(x_{i})$$ 
+Caso continuo
+$$E(X) = \int\limits_{-\infty}^{+\infty}x f(x) \:dx$$  
+
+
+</br>
+
+#### **VARIANZA**
+
+Se define como varianza la diferencia entre el segundo momento y el cuadrado del primer momento 
+
+$$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}  = \sigma^{2}$$ 
+</br>
+
+#### **VARIABLE ALEATORIA CONJUNTA**
+
+Se define como una pareja de de variables aleatorias ($X,Y$), que poseen una distribución de probabilidad conjunta $f_{_{X,Y}}(x,y)$, que debe ser positiva en todos sus valores y además que el conjunto total de sus valores debe ser igual a uno.
+
+</br>
+
+Caso discreto-discreto
+$$\displaystyle\sum\limits_{x=x_{(1)}}^{x_{(n)}}\displaystyle\sum\limits_{y=y_{(1)}}^{y_{(n)}}f_{_{X,Y}}(x,y)=1$$
+
+Caso continuo-continuo
+$$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) \:dx \:dy  = 1$$
+
+</br>
+
+#### **VALOR ESPERADO CONJUNTO**
+
+Caso discreto-discreto:
+$$E[X,Y]=\displaystyle\sum_{R_{X}}\displaystyle\sum_{R_{Y}} xy f(x,y)$$
+
+Caso continuo-continuo
+$$E[XY]= \displaystyle\int_{-\infty}^{\infty} \displaystyle\int_{-\infty}^{\infty} x.y.f(x,y) \,dx \,dy$$
+
+</br>
+
+#### **COVARIANZA**
+
+Indicador de variabilidad bivariado
+
+$$COV[X,Y]=E[XY]-E[X]E[Y]$$
+
+</br>
+
+#### **CORRELACIÓN**
+
+Indicador del grado de asociación lineal entre dos variables
+
+$$\rho=\displaystyle\frac{COV[XY]}{\displaystyle\sqrt{V[X].V[Y]}} $$
+
   
 </br></br>
 
-#### **MAPA** 
+### **MAPA** 
   
 
 ```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
@@ -49,10 +152,12 @@ knitr::include_graphics("images/variables.png")
 
 ### **Pregunta 1**
 
+En relación con la distribución normal,
+
 ```{r quiz_1}
 
 quiz(
-  question("En relación con la distribución normal, ¿Cuál de las siguientes afirmaciones es falsa?:", 
+  question("¿Cuál de las siguientes afirmaciones es falsa?:", 
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
            answer("Es una distribución de probabilidad teórica discreta.", correct = TRUE),
@@ -63,7 +168,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -71,27 +176,31 @@ quiz(
 
 ### **Pregunta 2**
 
+Cuando se requiere calcular la probabilidad de $P(X = x)$, en el caso de una variable aleatoria discreta,
+
 ```{r quiz_2}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("Es necesario conocer para hallar su valor: ", 
+           correct = "Correcto!, al reemplazar x en (x) se obtiene el valor de P(X=x).", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("V[X]", message = "No...intentalo de nuevo!"),
+           answer("F(x)", message = "No...intentalo de nuevo!"),
+           answer("f(x)", correct = TRUE),
+           answer("E[X]", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = "  "
 )
 
 ```
 
 
 ### **Pregunta 3**
+
+
 
 ```{r quiz_3}
 
@@ -107,7 +216,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -128,7 +237,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -136,21 +245,30 @@ quiz(
 
 ### **Pregunta 5**
 
+La siguiente función $f_{_{XY}}(x,y)$ define las probabidades conjuntas entre X: número de inconvenientes presentadas en un vehiculo de carga en su viaje de ida  y Y: el número de inconvenientes que se presentan en el viaje de regreso.
+
+|    |        |       |  $x$ |      |
+|:--:|:------:|:-----:|:----:|:----:|
+|    |$f(x,y)$| 1     |  2   |  3   |
+|$y$ |  1     | 0.05  | 0.05 | 0.10 |
+|    |  2     | 0.05 | 0.10 | 0.35  |
+|    |  3     | 0     | 0.20 | 0.10 |
+
 ```{r quiz_5}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("No es correcto afirmar que:", 
+           correct = "Correcto!, P(X<2 ; Y<2) = 0.05.", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("E[X] = 0.1 + 2*0.35 + 3*0.55", message = "No...intentalo de nuevo!"),
+           answer("P(2,2) = 0.10", message = "No...intentalo de nuevo!"),
+           answer("E[Y] = 0.2+0.50*2+0.30*3", message = "Incorrecto. Intenta de nuevo!."),
+           answer("P(X<2 ; Y<2) = 0.05+ 0.05", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```

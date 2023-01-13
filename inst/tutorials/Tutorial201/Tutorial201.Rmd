@@ -184,7 +184,7 @@ Cuando se requiere calcular la probabilidad de $P(X = x)$, en el caso de una var
 
 quiz(
   question("Es necesario conocer para hallar su valor: ", 
-           correct = "Correcto!, al reemplazar x en (x) se obtiene el valor de P(X=x).", 
+           correct = "Correcto!, al reemplazar x en f(x) se obtiene el valor de P(X=x).", 
            allow_retry = TRUE,
            answer("V[X]", message = "No...intentalo de nuevo!"),
            answer("F(x)", message = "No...intentalo de nuevo!"),

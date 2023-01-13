@@ -29,7 +29,7 @@ c4="#686868" # GRIS COLOR TEXTO
 knitr::include_graphics("images/banner2.png")
 ```
 
-El presente tutorial contiene preguntas relacionadas con los temas abordados en la Unidad 2 sobre Variable Aleatoria, conceptos importantes para la compresión de la Inferencia Estadística.
+El presente tutorial contiene preguntas y problemas  relacionadas con los temas abordados en la Unidad 2 sobre Variable Aleatoria. Conceptos importantes para la compresión de la Inferencia Estadística.
 
 </br>
   
@@ -152,13 +152,15 @@ knitr::include_graphics("images/variables.png")
 
 ### **Pregunta 1**
 
-En relación con la distribución normal,
+En relación con la distribución normal con función de densidad :
+
+$$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$ 
 
 ```{r quiz_1}
 
 quiz(
   question("¿Cuál de las siguientes afirmaciones es falsa?:", 
-           correct = "Respuesta y explicación!, .", 
+           correct = "Correcto!, la distribución normal corresponde a una variable continua.", 
            allow_retry = TRUE,
            answer("Es una distribución de probabilidad teórica discreta.", correct = TRUE),
            answer("La distancia entre el eje vertical trazado en la media y el punto de inflexión de la curva es la desviación estándar.", message = "Nop...intentalo de nuevo!"),
@@ -200,18 +202,30 @@ quiz(
 
 ### **Pregunta 3**
 
+La siguiente función
 
+$$\begin{equation*}
+		f(x)=\left\lbrace
+		\begin{array}{lll}
+			\lambda \exp{\{-\lambda x\}}  &,& x > 0   \\
+			&&\\
+			0 &,& x \leq 0 
+		\end{array}
+		\right.
+	\end{equation*}$$
+	
+	está definida para una variable aleatoria.
 
 ```{r quiz_3}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("De ella podemos afirmar que", 
+           correct = "Correcto!, f(x) corresponde a un modelo continuo, más concretamente el modelo exponencial.", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("La variable aleatoria X,es discreta  para valores mayores a cero", message = "No,...pero intentalo de nuevo!"),
+           answer("La variable no esta definida para valores discretos", message = "No...intentalo de nuevo!"),
+           answer("La variable X, es continua con valores mayores a cero", correct = TRUE),
+           answer("f(x) no cumple con las condiciones requeridas y por tanto X no es una variable aleatoria", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -223,16 +237,28 @@ quiz(
 
 ### **Pregunta 4**
 
+Para una variable aleatoria continua con función de densidad de probabilidad :
+
+$$\begin{equation*}
+		f(x)=\left\lbrace
+		\begin{array}{lll}
+			k   &,& 0 \leq x \leq 1   \\
+			&&\\
+			0 &,& \text{en otro caso} 
+		\end{array}
+		\right.
+	\end{equation*}$$
+
 ```{r quiz_4}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("f(x) será una función de densidad de probabilidad si: ", 
+           correct = "Correcto!, f(x) corresponde a una linea horizontal entre 0 y 1. El área por debajo de la función conforma un cuadrado con base uno y por tanto la altura (k) debe ser igual a uno.", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("k = 0", message = "No, pero intentalo de nuevo!"),
+           answer("k = 1", correct = TRUE),
+           answer("k = 1/2", message = "Incorrecto. Intenta de nuevo!."),
+           answer("k = 1/4", message = "No...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
@@ -276,21 +302,28 @@ quiz(
 
 ### **Pregunta 6**
 
+Suponga que una variable aleatoria discreta está definida por la siguiente función de distribución de probabilidad:
+
+| $x$    |   $0$  |  $1$   |  $2$   |
+|:-------|:-------|:-------|:-------|
+| $f(x)$ |  $1/3$ | $1/2$  | $1/6$  |
+
+
 ```{r quiz_6}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("No es correcto afirmar que:  ", 
+           correct = "Correcto!, E[X] = 0 * 1/3 + 1 * 1/2 + 2 * 1/6.", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("E[X] = 1/2 + 1/6", correct = TRUE),
+           answer("V[X] = 1/2 + 9/6 - 25/36", message = "No...intentalo de nuevo!"),
+           answer("f(x), es una función de distribución de probabilidad", message = "Incorrecto. Intenta de nuevo!."),
+           answer("F(1) = 5/6", message = "No...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```

@@ -30,7 +30,7 @@ c4="#686868" # GRIS COLOR TEXTO
 knitr::include_graphics("images/banner2.png")
 ```
 
-El presente tutorial contiene preguntas relacionadas con , el resumen de datos a través de indicadores. A continuación se presentan un resumen  con los principales conceptos:
+El presente tutorial contiene preguntas relacionadas  con el resumen de datos a través de indicadores. A continuación se presentan un resumen  con los principales conceptos:
 
 </br>
 
@@ -127,7 +127,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -149,7 +149,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -171,7 +171,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -192,7 +192,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -203,8 +203,8 @@ quiz(
 ```{r quiz_5}
 
 quiz(
-  question("¿Si a todos los valores de una variable les sumamos una constante positiva m entonces,", 
-           correct = "Respuesta y explicación!, .", 
+  question("Si a todos los valores de una variable les sumamos una constante positiva m entonces:", 
+           correct = "Correcto!, por propiedades de la varianza V(X+m)= V(X)+0", 
            allow_retry = TRUE,
            answer("La nueva varianza aumenta en esa constante m", message = "Cerca, pero no...intentalo de nuevo!"),
            answer("La nueva varianza disminuye en esa constante m", message = "Nop...intentalo de nuevo!"),
@@ -214,7 +214,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -236,7 +236,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -258,7 +258,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -280,7 +280,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -302,7 +302,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```
@@ -324,7 +324,7 @@ quiz(
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+  caption = " "
 )
 
 ```

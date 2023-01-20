@@ -120,7 +120,7 @@ quiz(
            correct = "Correcto !, la mediana se  mentiene igual, aunque varien datos en los extremos.", 
            allow_retry = TRUE,
            answer("La media aritmética", message = "No, pero intentalo de nuevo!"),
-           answer("El percentil 98", message = "Nop...intentalo de nuevo!"),
+           answer("El percentil 98", message = "No...intentalo de nuevo!"),
            answer("La mediana",  correct = TRUE), 
            answer("El percentil 95",message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -164,7 +164,7 @@ quiz(
            correct = "Correcto!. 14/120 = 0.116, lo cual indica que solo te supera el 11.6% y tu posición corresponde al percentil  88.4.", 
            allow_retry = TRUE,
            answer("He superado el noveno decil", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("Mi nota es el percentil 91", message = "Nop...intentalo de nuevo!"),
+           answer("Mi nota es el percentil 91", message = "No...intentalo de nuevo!"),
            answer("He superado el percentil 85", correct = TRUE),
            answer("Ninguna de las anteriores", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -185,7 +185,7 @@ quiz(
            correct = "Correcto!. la mediana es robusta a cambios en los datos extremos.", 
            allow_retry = TRUE,
            answer("Cambia el valor de la varianza de los datos", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("Cambia el valor del rango de los datos", message = "Nop...intentalo de nuevo!"),
+           answer("Cambia el valor del rango de los datos", message = "No...intentalo de nuevo!"),
            answer("Cambia la media de los datos", message = "Incorrecto. Intenta de nuevo!."),
            answer("Cambia la mediana de los datos", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -207,7 +207,7 @@ quiz(
            correct = "Correcto!, por propiedades de la varianza V(X+m)= V(X)+0", 
            allow_retry = TRUE,
            answer("La nueva varianza aumenta en esa constante m", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("La nueva varianza disminuye en esa constante m", message = "Nop...intentalo de nuevo!"),
+           answer("La nueva varianza disminuye en esa constante m", message = "No...intentalo de nuevo!"),
            answer("La nueva varianza queda multiplicada por esa constante m", message = "Incorrecto. Intenta de nuevo!."),
            answer("La nueva varianza no varia", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -251,7 +251,7 @@ quiz(
            correct = "Correcto!, por propiedad de la varianza al multiplicar todos los datos por 2.2 el valor de la varianza se ve multiplocado por 2.2 al cuadrado .", 
            allow_retry = TRUE,
            answer("La varianza de los pesos permanece igual al ser medida en libras o en kilogramos", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("La varianza de los pesos aumenta en 2.2  al pasar los pesos de kilogramos a libras", message = "Nop...intentalo de nuevo!"),
+           answer("La varianza de los pesos aumenta en 2.2  al pasar los pesos de kilogramos a libras", message = "No...intentalo de nuevo!"),
            answer("La varianza de los pesos disminuye en 2.2 al pasar los pesos de kilogramos a libras", message = "Incorrecto. Intenta de nuevo!."),
            answer("La varianza de los pesos se multiploca por 2.2 al cuadrado al pasar los pesos de kilogramos a libras", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -273,7 +273,7 @@ quiz(
            correct = "Respuesta y explicación!, .", 
            allow_retry = TRUE,
            answer("Los datos son simetricos", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("La varianza es pequeña", message = "Nop...intentalo de nuevo!"),
+           answer("La varianza es pequeña", message = "No...intentalo de nuevo!"),
            answer("Los datos presentan un alto grado de variabilidad", correct = TRUE),
            answer("Los datos presenhtan un pequeño sesgo a la derecha", message = "Incorrecto. Intenta de nuevo!."),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -295,7 +295,7 @@ quiz(
            correct = "Correcto!, cuando el valor del coeficiente de asimetria toma valores positivos, indica que la forma de los datos es asimetrica positiva, presentado una mayor concentración de datos en su parte izquierda y por tanto la mediana es menor que la media.", 
            allow_retry = TRUE,
            answer("La media y la mediana son iguales", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("La media y la mediana son levemente diferentes", message = "Nop...intentalo de nuevo!"),
+           answer("La media y la mediana son levemente diferentes", message = "No...intentalo de nuevo!"),
            answer("La media es menor que la mediana", message = "Incorrecto. Intenta de nuevo!."),
            answer("La mediana es menor que la media", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -319,7 +319,7 @@ quiz(
            answer("La media", message = "Cerca, pero no...intentalo de nuevo!"),
            answer("La mediana", correct = TRUE),
            answer("El rango medio", message = "Incorrecto. Intenta de nuevo!."),
-           answer("La moda", message = "Nop...intentalo de nuevo!"),
+           answer("La moda", message = "No...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),

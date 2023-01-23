@@ -391,7 +391,7 @@ data("CarreraLuz22")
 ```{r p4-hint}
 library(paqueteMET)
 breaks=c( )     # limites de intervalos
-tiempos.R=cut(CarreraLuz22$ , breaks)
+tiempos.R=cut(CarreraLuz22$timerun/60, breaks)
 table()
 ```
 

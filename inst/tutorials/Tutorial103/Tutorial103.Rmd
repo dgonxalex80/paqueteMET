@@ -34,7 +34,7 @@ El presente tutorial contiene preguntas relacionadas con ,
 conceptos importantes en 
 
 </br>
-  
+
 #### **CONCEPTOS**
 
 Dependiendo de el tipo de variable y el tipo de escala se elige el tipo de gráfica a utilizar para la representación de la variable.
@@ -71,7 +71,7 @@ Dependiendo de el tipo de variable y el tipo de escala se elige el tipo de gráf
 </br></br>
 
 #### **MAPA** 
-  
+
 
 ```{r, echo=FALSE, , out.width="100%", fig.align = "center"}
 knitr::include_graphics("images/graficas.png")  
@@ -85,18 +85,18 @@ knitr::include_graphics("images/graficas.png")
 ```{r quiz_1}
 
 quiz(
-  question("La caja del diagrama de cajas y bigotes, representa: ", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("El 50% de los valores al rededor de la media", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("Todos los valores, menos los valores atípicos", message = "Nop...intentalo de nuevo!"),
-           answer("Los valores comprendidos entre los cuartiles 25 y 75", message = "Incorrecto. Intenta de nuevo!."),
-           answer("Ninguna de las anteriores", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+question("La caja del diagrama de cajas y bigotes, representa: ", 
+correct = "Respuesta y explicación!, .", 
+allow_retry = TRUE,
+answer("El 50% de los valores al rededor de la media", message = "Cerca, pero no...intentalo de nuevo!"),
+answer("Todos los valores, menos los valores atípicos", message = "Nop...intentalo de nuevo!"),
+answer("Los valores comprendidos entre los cuartiles 25 y 75", message = "Incorrecto. Intenta de nuevo!."),
+answer("Ninguna de las anteriores", correct = TRUE),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = "Visualización"
 )
 
 ```
@@ -107,18 +107,18 @@ quiz(
 ```{r quiz_2}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+question("La manera correcta de representar gráficamente la variable NIVEL DE SATISFACCIÓN POR SERVICIO DE ENVÍO  es:", 
+correct = "Correcto!,.El diagrama de barras es el diagrama adecuado para representar una variable cualitativa en escala ordinal.", 
+allow_retry = TRUE,
+answer("Un diagrama circular o diagrama de tortas", message = "No,...intentalo de nuevo!"),
+answer("Un diagrana de dispersión", message = "No...intentalo de nuevo!"),
+answer("Un histograma", message = "Incorrecto. Intenta de nuevo!."),
+answer("Un diagrama de barras", correct = TRUE),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = "Visualización"
 )
 
 ```
@@ -129,39 +129,51 @@ quiz(
 ```{r quiz_3}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+question("Un histograma no debe ser empleado para  la representación de una variable como:", 
+correct = "Correcto!, El histograma construye intervalos que contiene los datos y permite encontrar aproximaciones de los indicadores, pero no sus valores precisos.", 
+allow_retry = TRUE,
+answer("El tiempo de duración de una llamada", message = "No...intentalo de nuevo!"),
+answer("El peso de un paquete", message = "No...intentalo de nuevo!"),
+answer("El tipo de defecto presentado una prenda de vestir", correct = TRUE),
+answer("El número de hijos de un hogar", message = "Incorrecto. Intenta de nuevo!."),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = "Visualización"
 )
 
 ```
 
 ### **Pregunta 4**
 
+El siguiente diagrama de tallos y hojas contiene información sobre el tiempo en segundos que tarda una respuesta a una solicitud electrónica que tiene como promedio 166.1 s.
+
+<pre>
+10 | 4
+12 | 34486899
+14 | 5659
+16 | 124588934566799
+18 | 1156822356
+20 | 56
+</pre>
+
+
 ```{r quiz_4}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+question("Podemos con estra información afirmar:", 
+correct = "Correcto!, el rango es igual a 206 - 104 = 102 s.", 
+allow_retry = TRUE,
+answer("La mediana de los tiempos es 161", message = "No...intentalo de nuevo!"),
+answer("La media es 186", message = "No...intentalo de nuevo!"),
+answer("El rango es 102", correct = TRUE),
+answer("El valor mínimo es 10.4" , message = "Incorrecto. Intenta de nuevo!."),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = " "
 )
 
 ```
@@ -169,132 +181,272 @@ quiz(
 
 ### **Pregunta 5**
 
+La siguiente gráfica de densidad, se presenta el tiempo de carrera registrado por un grupo de atletas en la carrera la Luz 2022
+
+
+```{r, echo=FALSE}
+library(paqueteMET)
+data("CarreraLuz22")
+x=CarreraLuz22$timerun/60
+par(mar = c(5, 4, 4, 1)+0.5)  # margenes de la gráfica
+plot(density(x), lwd=3, col="#0d3b66",
+main = "Distribución del tiempo de carrera",
+xlab="tiempo (min)",
+ylab = "densidad", las=1,
+cex.lab=1,  # tamaño de etiqueta ejes
+cex.axis=.8, # tamaño escalas de los ejes 
+cex.main=1, # tamaño del titulo
+cex.sub=1)    # tamaño del subtitulo)
+```
+
+
 ```{r quiz_5}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
+question("De la gráfica no se puede afirmar :", 
+correct = "Correto!, En presencia de datos atípicos la media presenta una desviación debido al aumento notorio de la suma de todos los valores. No ocurre lo mismo con la mediana es robuzta ante cambios en los extremos.", 
+allow_retry = TRUE,
+answer("Este diagráma permite visualizar el rango de tiempo con mayor concentración", message = "Cerca, pero no...intentalo de nuevo!"),
+answer("Existen muchos datos atípicos que hacen que la media sea el mejor indicador de centro", correct = TRUE),
+answer("El ganador registró un tiempo de carrera de aproximadamente 30 minutos", message = "Incorrecto. Intenta de nuevo!."),
+answer("La forma de la gráfica es simétrica con algunos datos atípicos" , message = "Nop...intentalo de nuevo!"),
+# Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
+submit_button = "Enviar respuesta",
+try_again_button = "Intentar de nuevo"),
+# Si no ponemos un caption aparecerá la palabra Quiz en inglés.
+caption = " "
 )
 
 ```
 
 
-### **Pregunta 6**
 
-```{r quiz_6}
+## **PROBLEMAS**
 
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
+
+### **Problema 1**
+
+Enunciado
+
+```{r p1, exercise=TRUE, exercise.lines = 5}
+data(paqueteMOD)
+data(inflacion2022)
 
 ```
 
 
-### **Pregunta 7**
+```{r p1-hint}
+data(paqueteMOD)
+data(inflacion2022)
+y=ts(inflacion2022$inflacion, star=c(1993,1), end=c(2022,12), frequency=12)
+```
 
-```{r quiz_7}
 
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
+```{r p1-solution}
+data(paqueteMOD)
+data(inflacion2022)
+y=ts(inflacion2022$inflacion, star=c(1993,1), end=c(2022,12), frequency=12)
+plot(y, type="l",
+main="Inflación Colombia  ene-1993 a dic-2022",
+ylab="inflación acumulada anual (%)",
+xlab = "meses", las=1,
+col="#ee964b", 
+lwd = 4)
+```
+
+
+
+### **Problema 2*
+
+Enunciado
+
+```{r p2, exercise=TRUE, exercise.lines = 5}
+
 
 ```
 
 
-### **Pregunta 8**
+```{r p2-hint}
 
-```{r quiz_8}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
 
 ```
 
 
-### **Pregunta 9**
-
-```{r quiz_9}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
+```{r p2-solution}
 
 ```
 
 
-### **Pregunta 10**
+### **Problema 3**
 
-```{r quiz_10}
+Enunciado
 
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
+```{r p3, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p3-hint}
+
+
+```
+
+
+```{r p3-solution}
+
+```
+
+
+
+### **Problema 4**
+
+Enunciado
+
+```{r p4, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p4-hint}
+
+
+```
+
+
+```{r p4-solution}
+
+```
+
+
+
+### **Problema 5**
+
+Enunciado
+
+```{r p5, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p5-hint}
+
+
+```
+
+
+```{r p5-solution}
+
+```
+
+
+
+### **Problema 6**
+Enunciado
+
+```{r p6, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p6-hint}
+
+
+```
+
+
+```{r p6-solution}
+
+```
+
+
+
+### **Problema 7**
+
+Enunciado
+
+```{r p7, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p7-hint}
+
+
+```
+
+
+```{r p7-solution}
+
+```
+
+
+
+### **Problema 8**
+
+Enunciado
+
+```{r p8, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p8-hint}
+
+
+```
+
+
+```{r p8-solution}
+
+```
+
+
+
+### **Problema 9**
+
+Enunciado
+
+```{r p9, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p9-hint}
+
+
+```
+
+
+```{r p9-solution}
+
+```
+
+
+
+### **Problema 10**
+
+Enunciado
+
+```{r p10, exercise=TRUE, exercise.lines = 5}
+
+
+```
+
+
+```{r p10-hint}
+
+
+```
+
+
+```{r p10-solution}
 
 ```
 

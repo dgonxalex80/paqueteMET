@@ -226,9 +226,9 @@ caption = " "
 
 ### **Problema 1**
 
-Enunciado
+El paquete  paqueteMET contiene la data inflacion que corresponde a la serie de tiempo de este indicador desde enero de 1993 a diciembre de 2022. Construya una gráfica de tiempo que de cuenta del comportamiento de esta variable para el periodo indicado.
 
-```{r p1, exercise=TRUE, exercise.lines = 5}
+```{r p1, exercise=TRUE, exercise.lines = 10}
 data(paqueteMOD)
 data(inflacion2022)
 
@@ -247,7 +247,7 @@ data(paqueteMOD)
 data(inflacion2022)
 y=ts(inflacion2022$inflacion, star=c(1993,1), end=c(2022,12), frequency=12)
 plot(y, type="l",
-main="Inflación Colombia  ene-1993 a dic-2022",
+main="Inflación Colombia  ene-1993 a dic -2022",
 ylab="inflación acumulada anual (%)",
 xlab = "meses", las=1,
 col="#ee964b", 
@@ -258,195 +258,224 @@ lwd = 4)
 
 ### **Problema 2*
 
-Enunciado
+Durante 5 meses se construyen 134 kilómetros de carretera en la siguiente forma: En el primer més, 3.60% del total del proyecto; en el segundo més un 7.60% del total; en el tercer més, el 15.3% del total; en el cuarto més 24.5% del total y en último més, el 49% restante.
 
-```{r p2, exercise=TRUE, exercise.lines = 5}
+```{r p2, exercise=TRUE, exercise.lines = 10}
 
 
 ```
 
 
 ```{r p2-hint}
-
+mes= 1:4
+construccion=c(0.036,0.076,0.153,0.245,0.490)
 
 ```
 
 
 ```{r p2-solution}
-
+mes=1:5
+construccion=c(0.036,0.076,0.153,0.245,0.490)
+plot(mes,construccion)
+plot(y, type="l",
+     main=" ",
+     ylab=" ",
+     xlab = " ", las=1,
+     col="#ee964b", 
+     lwd = 4
+     )
 ```
 
 
 ### **Problema 3**
 
-Enunciado
+Una consulta en tiendas en linea para memorias USB 128GB arrojó lo siguientes valores:
 
-```{r p3, exercise=TRUE, exercise.lines = 5}
+<pre>
+        6 | 0 3 4
+        6 | 7 8 8 8
+        7 | 0 0 1 1 2 2 2 3 3 4 4
+        7 | 5 5 5 5 5 6 6 7 7 9
+        8 | 0 3 3 4
+        8 | 5 6 7 8 8 9 9
+        9 | 1
+</pre>
+
+```{r p3, exercise=TRUE, exercise.lines = 10}
 
 
 ```
 
 
 ```{r p3-hint}
-
+x=c(60, 63, 64, 67, 68, 68, 68, 70, 70, 71, 71, 72, 72, 72, 73, 73, 74, 74, 75, 75, 75, 75, 75, 76, 76, 77, 77, 79,
+80, 83, 83, 84, 85, 86, 87, 88, 88, 89, 89, 91)
 
 ```
 
 
 ```{r p3-solution}
 
+x=c(60, 63, 64, 67, 68, 68, 68, 70, 70, 71, 71, 72, 72, 72, 73, 73, 74, 74, 75, 75, 75, 75, 75, 76, 76, 77, 77, 79,
+    80, 83, 83, 84, 85, 86, 87, 88, 88, 89, 89, 91)
+boxplot(x, las=1,
+        main=" ",
+        ylab=" ",
+        xlab = " ",
+        col="#ee964b")
+grid()
 ```
 
 
 
-### **Problema 4**
+<!-- ### **Problema 4** -->
 
-Enunciado
+<!-- Enunciado -->
 
-```{r p4, exercise=TRUE, exercise.lines = 5}
+<!-- ```{r p4, exercise=TRUE, exercise.lines = 5} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p4-hint}
+<!-- ```{r p4-hint} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p4-solution}
+<!-- ```{r p4-solution} -->
 
-```
+<!-- ``` -->
 
 
 
-### **Problema 5**
+<!-- ### **Problema 5** -->
 
-Enunciado
+<!-- Enunciado -->
 
-```{r p5, exercise=TRUE, exercise.lines = 5}
+<!-- ```{r p5, exercise=TRUE, exercise.lines = 5} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p5-hint}
+<!-- ```{r p5-hint} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p5-solution}
+<!-- ```{r p5-solution} -->
 
-```
+<!-- ``` -->
 
 
 
-### **Problema 6**
-Enunciado
+<!-- ### **Problema 6** -->
+<!-- Enunciado -->
 
-```{r p6, exercise=TRUE, exercise.lines = 5}
+<!-- ```{r p6, exercise=TRUE, exercise.lines = 5} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p6-hint}
+<!-- ```{r p6-hint} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p6-solution}
+<!-- ```{r p6-solution} -->
 
-```
+<!-- ``` -->
 
 
 
-### **Problema 7**
+<!-- ### **Problema 7** -->
 
-Enunciado
+<!-- Enunciado -->
 
-```{r p7, exercise=TRUE, exercise.lines = 5}
+<!-- ```{r p7, exercise=TRUE, exercise.lines = 5} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p7-hint}
+<!-- ```{r p7-hint} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p7-solution}
+<!-- ```{r p7-solution} -->
 
-```
+<!-- ``` -->
 
 
 
-### **Problema 8**
+<!-- ### **Problema 8** -->
 
-Enunciado
+<!-- Enunciado -->
 
-```{r p8, exercise=TRUE, exercise.lines = 5}
+<!-- ```{r p8, exercise=TRUE, exercise.lines = 5} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p8-hint}
+<!-- ```{r p8-hint} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p8-solution}
+<!-- ```{r p8-solution} -->
 
-```
+<!-- ``` -->
 
 
 
-### **Problema 9**
+<!-- ### **Problema 9** -->
 
-Enunciado
+<!-- Enunciado -->
 
-```{r p9, exercise=TRUE, exercise.lines = 5}
+<!-- ```{r p9, exercise=TRUE, exercise.lines = 5} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p9-hint}
+<!-- ```{r p9-hint} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p9-solution}
+<!-- ```{r p9-solution} -->
 
-```
+<!-- ``` -->
 
 
 
-### **Problema 10**
+<!-- ### **Problema 10** -->
 
-Enunciado
+<!-- Enunciado -->
 
-```{r p10, exercise=TRUE, exercise.lines = 5}
+<!-- ```{r p10, exercise=TRUE, exercise.lines = 5} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p10-hint}
+<!-- ```{r p10-hint} -->
 
 
-```
+<!-- ``` -->
 
 
-```{r p10-solution}
+<!-- ```{r p10-solution} -->
 
-```
+<!-- ``` -->
 

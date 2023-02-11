@@ -329,92 +329,6 @@ quiz(
 ```
 
 
-### **Pregunta 7**
-
-```{r quiz_7}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
-
-### **Pregunta 8**
-
-```{r quiz_8}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
-
-### **Pregunta 9**
-
-```{r quiz_9}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
-
-
-### **Pregunta 10**
-
-```{r quiz_10}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = "Visualización"
-)
-
-```
 
 
 ## **PROBLEMAS**
@@ -422,82 +336,130 @@ quiz(
 
 ### **Problema 1**
 
-Enunciado
+Una variable aleatoria continua tiene como función de densidad de probabilidad $f(x) = 2(1+x)/27$ para valores $2 \leq x \leq 5$. 
 
-```{r p1, exercise=TRUE, exercise.lines = 5}
+Determine:
+
+a. $P(X < 4)$
+b. $P(3 \leq X < 4)$
+
+
+```{r p1, exercise=TRUE, exercise.lines = 10}
 
 
 ```
 
 
 ```{r p1-hint}
-
+fx = function(x){2*(1+x)/27}
+integrate(fx, lower=2, upper=5) # verificación de  integral f(x) dx =1
 
 ```
 
 
 ```{r p1-solution}
-
+fx = function(x){2*(1+x)/27}
+integrate(fx, lower=2, upper=4) # P(X <4)
+integrate(fx, 3,4) # P(3 <= X < 4)
 ```
 
 
 
-### **Problema 2*
+### **Problema 2**
 
-Enunciado
+Sea X el número de solicitudes que recibe un sistema de ventas en linea sigue una distribución de probabilidad con función $f(x) = (\exp\{-2 \} \hspace{.3cm} 2^{x})/x!$. 
 
-```{r p2, exercise=TRUE, exercise.lines = 5}
+Determine la probabilidad $P(0 \leq X \leq 5)$
 
+
+```{r p2, exercise=TRUE, exercise.lines = 10}
+fx=function(x){(exp(x)*2^x)/factorial(x)}
 
 ```
 
 
 ```{r p2-hint}
-
+fx=function(x){(exp(x)*2^x)/factorial(x)}
+x=0:5
 
 ```
 
 
 ```{r p2-solution}
-
+fx=function(x){
+                (exp(-2)*2^x)/factorial(x)
+               }
+sum(fx(0:5))
 ```
 
 
 ### **Problema 3**
 
-Enunciado
+Para una variable aleatoria continua con función de probabilidad acumulada 
 
-```{r p3, exercise=TRUE, exercise.lines = 5}
+$$
+\begin{equation}
+F(x) = \left\lbrace
+\begin{array}{ll}
+0 \hspace{1.0cm} \text{si } x <0 \\
+0.2x \hspace{.5cm} \text{si } 0 \leq x\leq 5 \\
+1 \hspace{1.0cm} \text{si } 5 \leq x \\
+\end{array}
+\right.
+\end{equation}
+$$ 
+
+Determinen el valor de 
+
+a. $P(X \leq 2.8)$
+b. $P(X > 1.5)$
+
+```{r p3, exercise=TRUE, exercise.lines = 10}
 
 
 ```
 
 
 ```{r p3-hint}
-
+0.2*2.8 # F(2.8) = P(X <= 2.8)
 
 ```
 
 
 ```{r p3-solution}
-
+0.2*2.8 # F(2.8) = P(X <= 2.8)
+1-(0.28*1.5)  #  1 - F(1.5) = 1 - P(X < 1.5) = P(X > 1.5)
 ```
 
 
 
 ### **Problema 4**
 
-Enunciado
+Para la variable aleatoria contunua $X$  con función de densidad : $f(x) = 1/22 \hspace{.2cm}exp\{-x/22\}$, para $x > 0$ y cero en cualquier otro caso, determine su valor esperado y su varianza.
+
+**Nota**:
+
+$E[X] = \int_{-\infty}^{\infty} xf(x) dx$
+$V[X] = E[X^{2}] - E[X]^{2}$
+$E[X^{2}] = \int_{-\infty}^{\infty} x^{2}f(x) dx$
+
 
 ```{r p4, exercise=TRUE, exercise.lines = 5}
-
+fx=function(x){1/22*exp(-x/22)}
+integrate(fx, 0, Inf) # verificación de f(x) es una función de densidad de probabilidad
 
 ```
 
 
 ```{r p4-hint}
-
-
+xfx=function(x){1/22*x*exp(-x/22)}
+x2fx=function(x){1/22*x^2*exp(-x/22)}
+Ex=integrate(xfx, 0, Inf) # valor espeado
+cat("E[X] = ", Ex$value, "\n")
+Ex2=integrate(x2fx, 0, Inf) 
+Vx=Ex2$value - Ex$value^2
+cat("V[X] = ", Vx)
+# varianza
 ```
 
 
@@ -509,52 +471,100 @@ Enunciado
 
 ### **Problema 5**
 
-Enunciado
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 , 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
 
-```{r p5, exercise=TRUE, exercise.lines = 5}
 
+Determine si $f_{_{XY}}(x,y)$ es una función de densidad de probabilidad conjunta
+
+
+**Nota**
+$$\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} f(x,y) \:dx \:dy  = 1$$
+
+
+
+
+```{r p5, exercise=TRUE, exercise.lines = 15}
+library(cubature) 
 
 ```
 
 
 ```{r p5-hint}
-
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # función de densidad conjunta
 
 ```
 
 
 ```{r p5-solution}
-
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(1, 1))# doble integral
 ```
 
 
 
 ### **Problema 6**
-Enunciado
 
-```{r p6, exercise=TRUE, exercise.lines = 5}
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 , 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
 
+Determine $P(X \leq 0.5 ; Y \leq 0.3) $, $P(X \leq 0.80)$, $P(Y \geq 0.60)$
+	
+	
+
+
+```{r p6, exercise=TRUE, exercise.lines = 15}
+library(cubature) 
 
 ```
 
 
 ```{r p6-hint}
-
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
 
 ```
 
 
 ```{r p6-solution}
-
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(0.5, 0.3))# doble integral
 ```
 
 
 
 ### **Problema 7**
 
-Enunciado
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 , 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
 
-```{r p7, exercise=TRUE, exercise.lines = 5}
+Determine $\rho_{_{XY}}$, interprete su resultado
+
+```{r p7, exercise=TRUE, exercise.lines = 15}
 
 
 ```
@@ -571,68 +581,4 @@ Enunciado
 ```
 
 
-
-### **Problema 8**
-
-Enunciado
-
-```{r p8, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p8-hint}
-
-
-```
-
-
-```{r p8-solution}
-
-```
-
-
-
-### **Problema 9**
-
-Enunciado
-
-```{r p9, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p9-hint}
-
-
-```
-
-
-```{r p9-solution}
-
-```
-
-
-
-### **Problema 10**
-
-Enunciado
-
-```{r p10, exercise=TRUE, exercise.lines = 5}
-
-
-```
-
-
-```{r p10-hint}
-
-
-```
-
-
-```{r p10-solution}
-
-```
 

@@ -581,8 +581,51 @@ fxy=function(x){2/3*(x+2*y)}
 ```{r p7-solution}
 library(cubature) 
 fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
-adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(0.75, 0.75))
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(0.75, 0.750))
 ```
+
+
+
+
+
+
+### **Problema 8**
+
+Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
+   
+$$f(x,y)=\left\{
+\begin{array}{cc}
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 ,\hspace{.3cm} 0 \leq y \leq  1 \\
+&\\
+0 & \text{en cualquier otro caso} 
+\end{array}
+\right.$$
+
+
+
+Represente gráficamente la función de densidad de probabilidad conjunta
+
+
+```{r p7, exercise=TRUE, exercise.lines = 15}
+
+
+```
+
+
+```{r p7-hint}
+x=seq(0,1,length=10)
+y=seq(0,1,length=10)
+fxy=function(x,y){3/2*(x^2+y^2)}
+z=outer(x, y, fxy)
+persp(x,y,z,theta = 20, phi = 20,expand=0.5, col = "red",
+      xlab = "x", ylab ="y", zlab = "f(x,y)",
+      main=" ", col.main="blue")
+
+
+
+```
+
+
 
 
 

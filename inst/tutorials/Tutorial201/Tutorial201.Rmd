@@ -556,13 +556,13 @@ Un restaurante de comidas rápidas opera tanto en un local que da servicio en au
    
 $$f(x,y)=\left\{
 \begin{array}{cc}
-\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 , 0 \leq y \leq  1 \\
+\dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 ,\hspace{.3cm} 0 \leq y \leq  1 \\
 &\\
 0 & \text{en cualquier otro caso} 
 \end{array}
 \right.$$
 
-Determine $\rho_{_{XY}}$, interprete su resultado
+Determine $P(X<0.75; Y<0.75)$, interprete su resultado
 
 ```{r p7, exercise=TRUE, exercise.lines = 15}
 
@@ -571,13 +571,17 @@ Determine $\rho_{_{XY}}$, interprete su resultado
 
 
 ```{r p7-hint}
+fxy=function(x){2/3*(x+2*y)}
+
 
 
 ```
 
 
 ```{r p7-solution}
-
+library(cubature) 
+fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(0.75, 0.75))
 ```
 
 

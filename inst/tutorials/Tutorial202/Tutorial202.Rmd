@@ -198,7 +198,7 @@ y=apply(data, 1,mean)
 par(mfrow = c(1, 2))
 hist(x)
 hist(y)
-
+par(mfrow = c(1, 1))
 ```
 
 

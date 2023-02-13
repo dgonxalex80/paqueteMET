@@ -606,13 +606,13 @@ $$f(x,y)=\left\{
 Represente gráficamente la función de densidad de probabilidad conjunta
 
 
-```{r p7, exercise=TRUE, exercise.lines = 15}
+```{r p8, exercise=TRUE, exercise.lines = 15}
 
 
 ```
 
 
-```{r p7-hint}
+```{r p8-hint}
 x=seq(0,1,length=10)
 y=seq(0,1,length=10)
 fxy=function(x,y){3/2*(x^2+y^2)}

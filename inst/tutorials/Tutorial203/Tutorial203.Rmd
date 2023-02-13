@@ -134,10 +134,18 @@ Procedimiento que permite concluir a cerca de una afirmación sobre un parámetr
 Desde el punto de vista clásico, todas las pruebas de hipótesis trabajan en base a ciertos principios que consideran:
 
 * Hipótesis nula ($H_0$)
+
 * Hipótesis alterna ($H_1$)
+
 * Estadístico de Prueba ($EdeP$)
+
 * Región de Rechazo ($RdeR$)
+
 * Regla de Decisión($RD$)
+
+
+
+
 
 Cuando se decide ya sea en favor o en contra de una determinada prueba de hipótesis, es posible estar en una de las cuatro situaciones:
 
@@ -279,10 +287,10 @@ quiz(
 
 quiz(
   question("El nivel de significación o de significancia es la probabilidad de:", 
-           correct = "Respuesta y explicación!, .", 
+           correct = "El nivel de significancia o alpha es la probabilidad de cometer error tipo I", 
            allow_retry = TRUE,
-           answer("Rechazar Ho, cuando ésta es falsa", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("Rechazar Ho, cuando ésta es verdadera", correct = TRUE),
+           answer("Rechazar Ho, cuando Ho  es falsa", message = "Cerca, pero no...intentalo de nuevo!"),
+           answer("Rechazar Ho, cuando Ho es verdadera", correct = TRUE),
            answer("No rechazar Ho, cuando Ho es falsa", message = "Incorrecto. Intenta de nuevo!."),
            answer("No rechazar Ho, cuando Ho es verdadera", message = "Nop...intentalo de nuevo!"),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
@@ -300,8 +308,8 @@ quiz(
 ```{r quiz_7}
 
 quiz(
-  question("Respecto a las pruebas de hipótesis señale lo falso:", 
-           correct = "Respuesta y explicación!, .", 
+  question("Respecto a las pruebas de hipótesis, cuál de las siguientes afirmaciones es falsa:", 
+           correct = "La significancia es un referene que nos permite el rechazo o no de una prueba de hipótesis", 
            allow_retry = TRUE,
            answer("Es un procedimiento por el cual nos decidimos por la hipótesis nula (Ho) o por la alternativa (Ha).", message = "Cerca, pero no...intentalo de nuevo!"),
            answer("La Ha es la que se pone a prueba al realizar una prueba estadística.", message = "Nop...intentalo de nuevo!"),
@@ -317,67 +325,24 @@ quiz(
 ```
 
 
+
 ### **Pregunta 8**
-
-```{r quiz_8}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = " "
-)
-
-```
-
-
-### **Pregunta 9**
 
 ```{r quiz_9}
 
 quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
+  question("Es una prueba de hipótesis no paramétrica", 
+           correct = "la prueba de Shapiro-Wilk, es una prueba de normalidad, no paramétrica ", 
            allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
+           answer("prueba t para comparación de medias", message = "No...intentalo de nuevo!"),
+           answer("prueba F para la comparación de varianzas", message = "Nop...intentalo de nuevo!"),
+           answer("prueba z para una media", message = "Incorrecto. Intenta de nuevo!."),
+           answer("prueba de Shapiro- Wilk", correct = TRUE),
            # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
            submit_button = "Enviar respuesta",
            try_again_button = "Intentar de nuevo"),
   # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
   caption = "  "
-)
-
-```
-
-
-### **Pregunta 10**
-
-```{r quiz_10}
-
-quiz(
-  question("¿Pregunta?", 
-           correct = "Respuesta y explicación!, .", 
-           allow_retry = TRUE,
-           answer("opción 1", message = "Cerca, pero no...intentalo de nuevo!"),
-           answer("opción 2", message = "Nop...intentalo de nuevo!"),
-           answer("opción 3", message = "Incorrecto. Intenta de nuevo!."),
-           answer("opción 4", correct = TRUE),
-           # Si no cambiamos estos textos en los botones, se mostrarán en Inglés  
-           submit_button = "Enviar respuesta",
-           try_again_button = "Intentar de nuevo"),
-  # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-  caption = " "
 )
 
 ```

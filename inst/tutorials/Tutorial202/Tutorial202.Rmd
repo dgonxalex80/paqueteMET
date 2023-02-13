@@ -114,7 +114,7 @@ knitr::include_graphics("images/variables3.png")
 Para una variable aleatoria $X \sim unif(x,a,b)$,  con $a=10$ y  y $b=20$, simule una muestra de n=1000 y verifique que su  forma es aproximadamente constante en el rango de la variable 
  determine:
 
-```{r p1, exercise=TRUE, exercise.lines = 10}
+```{r p1, exercise=TRUE, exercise.lines = 15}
 x=runif(1000,10,20)
 
 ```
@@ -141,7 +141,7 @@ density(x) %>%
 
 Simule una variable $Z \sim N(0,1)$, y verifique mediante en gráfico de normalidad qqnorm que efectivamente su comportamiento es normal  
 
-```{r p2, exercise=TRUE, exercise.lines = 5}
+```{r p2, exercise=TRUE, exercise.lines = 15}
 n=1000
 z=rnorm(n,0,1)
 
@@ -171,7 +171,7 @@ qqline(z, col="red")
 Para una variables $X$ con distribución binomial con parámetros $n=50$ y $p=0.05$ y la variable $Y$,  media de una muestra de tamaño $n = 30$ de $X$, realice una grafica comparativa de las distribuciones  
 
 
-```{r p3, exercise=TRUE, exercise.lines = 5}
+```{r p3, exercise=TRUE, exercise.lines = 15}
 n = 30
 m = 1000
 data=matrix(rbinom(n*m, 50,0.05), nrow = m)
@@ -207,7 +207,7 @@ par(mfrow = c(1, 1))
 Simule una población de N=5000 objetos, donde cada objeto se clasifica en dos : en un 30% como $A$ y en el restante porcentaje como $B$. Verifique la proximidad del resultado a lo requerido
 
 
-```{r p5, exercise=TRUE, exercise.lines = 5}
+```{r p5, exercise=TRUE, exercise.lines = 15}
 n=1000
 
 ```
@@ -240,7 +240,7 @@ Genere una función que permita:
 * Calcule el estimador de la proporción muestral para un tamaño de muestra $n$ dado 
 
 
-```{r p6, exercise=TRUE, exercise.lines = 5}
+```{r p6, exercise=TRUE, exercise.lines = 15}
 n=5000
 poblacion=sample(c("M", "H"),n,replace=TRUE, c(0.50,0.50))
 muestra=function()

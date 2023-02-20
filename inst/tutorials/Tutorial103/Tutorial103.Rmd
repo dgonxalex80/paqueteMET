@@ -96,7 +96,7 @@ answer("Ninguna de las anteriores", correct = TRUE),
 submit_button = "Enviar respuesta",
 try_again_button = "Intentar de nuevo"),
 # Si no ponemos un caption aparecerá la palabra Quiz en inglés.
-caption = "Visualización"
+caption = " "
 )
 
 ```

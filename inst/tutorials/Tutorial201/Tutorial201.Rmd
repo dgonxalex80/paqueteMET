@@ -473,7 +473,7 @@ cat("V[X] = ", Vx)
 
 Un restaurante de comidas rápidas opera tanto en un local que da servicio en automovil (autoservicio) como en un segundo local que atiende a clientes que llegan caminando. En un dia cualquiera, la proporción del tiempo en servicio del autoservicio se representa por $X$, mientras que  $Y$ representa la proporción del tiempo en que el segundo local esta en servicios. La función de densidad conjunta que representa el comportamiento de estas dos variables está dado por :
    
-$$f(x,y)=\left\{
+$$f(x,    y)=\left\{
 \begin{array}{cc}
 \dfrac{2}{3}(x+2y) & \text{si } \hspace{.4cm }0 \leq x \leq 1 , 0 \leq y \leq  1 \\
 &\\
@@ -499,14 +499,14 @@ library(cubature)
 
 ```{r p5-hint}
 library(cubature) 
-fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # función de densidad conjunta
+fxy <- function(x) { 2/3*(x[1] + 2*x[2])} # función de densidad conjunta
 
 ```
 
 
 ```{r p5-solution}
 library(cubature) 
-fxy <- function(x) { 3/2*(x[1]^2 + x[2]^2)} # 
+fxy <- function(x) { 2/3*(x[1] + 2*x[2])} # función de densidad conjunta
 adaptIntegrate(fxy, lowerLimit = c(0, 0), upperLimit = c(1, 1))# doble integral
 ```
 

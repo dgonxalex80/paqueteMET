@@ -24,6 +24,7 @@ c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO
 c4="#686868" # GRIS COLOR TEXTO 
 library(normtest)
 library(nortest)
+library(randtests)
 ```
 
 ## **PRESENTACIÓN**

@@ -22,6 +22,7 @@ c2="#034a94" # AZUL FUERTE COLOR SECUNDARIO
 c3="#0eb0c6" # AZUL CLARO COLOR TERCEARIO  
 c4="#686868" # GRIS COLOR TEXTO 
 ##  <div class="content-box-blue">    </div> ## caja azul
+library(MASS)
 ```
 
 </br>
@@ -205,15 +206,8 @@ quiz(
 
 Al evaluar la forma funcional del modelo empleando la transformación Box-Cox, arroja el siguiente resultado
 
-```{r}
-library(paqueteMOD)
-library(MASS)
-data(beer) 
-bc=boxcox(lm(beer$precio ~ beer$poralcoh), lambda = -2:2)
-#Se repite el proceso pero esta vez entrechando el rango de valores de lambda 
-(lambda <- bc$x[which.max(bc$y)])
 
-```
+<img src="images/boxcox.png" width="400">
 
 
 ```{r quiz_4}
@@ -301,7 +295,7 @@ A partir de la data `biomasa` contenida en `paqueteMOD` contiene información so
 ```{r p2, exercise=TRUE, exercise.lines = 20}
 library(paqueteMOD)
 library(lmtest)
-data(biomas)
+data(biomasa)
 
 ```
 
@@ -309,7 +303,7 @@ data(biomas)
 ```{r p2-hint}
 library(paqueteMOD)
 library(lmtest)
-data(biomas)
+data(biomasa)
 shapiro.test()
 gqtest()
 dwtest()
@@ -320,7 +314,7 @@ t.test()
 ```{r p2-solution}
 library(paqueteMOD)
 library(lmtest)
-data(biomas)
+data(biomasa)
 modelo=lm(biomasa$bio_total ~ biomasa$altura)
 shapiro.test(modelo$residuals)
 gqtest(modelo)
@@ -337,7 +331,8 @@ t.test(modelo$residuals)
 La data `biomasa` contenida en `paqueteMOD` contiene información sobre la biomasa total y la altura de 90 árboles.  Verifique el valor de $\lambda$ para la constante de la transformación Box-Cox para establecer la transformación apropiada de la variable dependiente en el modelo $\text{biomasa} = \beta_{0} + \beta_{1} \text{altura} + \varepsilon$ 
 
 ```{r p3, exercise=TRUE, exercise.lines = 20}
-library(paqueteMOD)
+library(paqueteMOD).
+library(MASS)
 data(biomasa)
 
 ```
@@ -345,6 +340,7 @@ data(biomasa)
 
 ```{r p3-hint}
 library(paqueteMOD)
+library(MASS)
 data(biomasa)
 boxcox()
 
@@ -354,6 +350,7 @@ boxcox()
 
 ```{r p3-solution}
 library(paqueteMOD)
+library(MASS)
 data(biomasa)
 bc=boxcox(lm(biomasa$bio_total ~ biomasa$altura), lambda = -1:1)
 (lambda <- bc$x[which.max(bc$y)])

@@ -1,12 +1,12 @@
-Package: paqueteMET
-Title: Paquete curso Métodos y Simulación Estadística  
+Package: paqueteMOD
+Title: Paquete curso Modelos Estadísticos para la toma de decisiones  
 Version: 0.0.0.1
 Authors@R: person("Daniel Enrique", 
                   "Gonzalez Gomez", , 
                   "dgonzalez@javerianacali.edu.co", 
                   role = c("aut", "cre"),
                   comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Paquete creado como apoyo al curso de Métodos y Simulación Estadística, Pontificia Universidad Javeriana Cali.
+Description: Paquete creado como apoyo al curso de Modelos Estadísticos para la toma de decisiones, Pontificia Universidad Javeriana Cali.
              Contiene tambien tutoriales  y test como apoyo a los diferentes módulos del curso.  
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -14,16 +14,17 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports:
-    cubature,
-    normtest,
-    nortest,
-    psych,
-    summarytools,
-    tidyverse
+    boot,
+    broom,
+    GGally,
+    ggplot2,
+    gridExtra,
+    learnr,
+    ROSE,
+    stargazer
 Suggests: 
     learnr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Depends: 
-    R (>= 2.10)
- 
+    R (>= 3.5.0)

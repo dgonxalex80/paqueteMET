@@ -230,7 +230,7 @@ determine que variable (altura o diametro) tiene más relación con la
 variable peso.</p>
 <div class="tutorial-exercise" data-label="p1" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="5">
-<pre class="text"><code>library(paqueteMOD)
+<pre class="text"><code>library(paqueteMET)
 data(&quot;arboles&quot;)</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
@@ -244,7 +244,7 @@ cor(,)</code></pre>
 <div class="tutorial-exercise-support" data-label="p1-solution"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
-<pre class="text"><code>library(paqueteMOD)
+<pre class="text"><code>library(paqueteMET)
 data(&quot;arboles&quot;)
 cor(arboles$peso,arboles$diametro)
 cor(arboles$peso,arboles$altura)</code></pre>
@@ -257,7 +257,7 @@ correlaciones entre las variables : peso, diametro y altura son
 diferentes de cero</p>
 <div class="tutorial-exercise" data-label="p2" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="5">
-<pre class="text"><code>library(paqueteMOD)
+<pre class="text"><code>library(paqueteMET)
 data(&quot;arboles&quot;)</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
@@ -271,7 +271,7 @@ cor.test()</code></pre>
 <div class="tutorial-exercise-support" data-label="p2-solution"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
-<pre class="text"><code>library(paqueteMOD)
+<pre class="text"><code>library(paqueteMET)
 data(&quot;arboles&quot;)
 arboles=as.data.frame(arboles)
 cor.test(arboles$peso,arboles$diametro)
@@ -348,6 +348,7 @@ cor.test(arboles$peso, arboles$altura)</code></pre>
 <p>
 <script type="application/shiny-prerendered" data-context="server-start">
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
+library(paqueteMET)
 library(learnr)
 library(ggplot2)
 knitr::opts_chunk$set(echo = FALSE,
@@ -401,24 +402,24 @@ session$onSessionEnded(function() {
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz_1-1", question = structure("Se puede afirmar que :", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_4a7dcec", 
+"character")), answers = list(structure(list(id = "lnr_ans_d9d3d6a", 
     option = "La variable X y la variable Y, tienen una relación causal", 
     value = "La variable X y la variable Y, tienen una relación causal", 
     label = structure("La variable X y la variable Y, tienen una relación causal", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("No, pero no…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_cc05292", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a6630ac", 
     option = "La variable X y la variable Y, tienen una relación lineal negativa media", 
     value = "La variable X y la variable Y, tienen una relación lineal negativa media", 
     label = structure("La variable X y la variable Y, tienen una relación lineal negativa media", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a599b01", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_59dddb6", 
     option = "La variable X y la variable Y, tiene una relación alta pero no lineal", 
     value = "La variable X y la variable Y, tiene una relación alta pero no lineal", 
     label = structure("La variable X y la variable Y, tiene una relación alta pero no lineal", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Incorrecto. Intenta de nuevo!.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_387437", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fc8cb32", 
     option = "La variable X y la variable Y, no presentan ninguna relación estadística", 
     value = "La variable X y la variable Y, no presentan ninguna relación estadística", 
     label = structure("La variable X y la variable Y, no presentan ninguna relación estadística", html = TRUE, class = c("html", 
@@ -431,7 +432,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz_1-1-answer", question = "quiz_1-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1171143891.45464, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1086069009.49426, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -439,21 +440,21 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz_2-1", question = structure("Cuando las variables de estudio proceden de un instrumento con preguntas con respueta en escala ordinal, convertidas en escala de intervalo, el indicador apropiado para medir la asociación de la suma de resultados obtenidos por las persoanas para diferentes factores del instrumento es:", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_716174b", 
+"character")), answers = list(structure(list(id = "lnr_ans_1e56459", 
     option = "Coeficiente de Pearson", value = "Coeficiente de Pearson", 
     label = structure("Coeficiente de Pearson", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("No, pero…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8f1fd0f", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e241685", 
     option = "Coeficiente de Spearman", value = "Coeficiente de Spearman", 
     label = structure("Coeficiente de Spearman", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_34b0c07", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d4e1b31", 
     option = "Coeficiente Tau b de Kendal", value = "Coeficiente Tau b de Kendal", 
     label = structure("Coeficiente Tau b de Kendal", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Incorrecto. Intenta de nuevo!.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ae9db55", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5b4a4f0", 
     option = "Coeficiente Eta", value = "Coeficiente Eta", label = structure("Coeficiente Eta", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("No…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
@@ -464,30 +465,30 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz_2-1-answer", question = "quiz_2-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1269058583.40905, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 553374068.742315, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz_3-1", question = structure("El coeficiente de correlación toma su signo positivo o negativo", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_d3e589c", 
+"character")), answers = list(structure(list(id = "lnr_ans_3e19be0", 
     option = "Del valor esperado de X, E[X]", value = "Del valor esperado de X, E[X]", 
     label = structure("Del valor esperado de X, E[X]", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("No…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_23cffef", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7b71c7e", 
     option = "Del valor esperado de Y, E[Y]", value = "Del valor esperado de Y, E[Y]", 
     label = structure("Del valor esperado de Y, E[Y]", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("No…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_410eb14", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bb78448", 
     option = "De la varianza de X por la varianza de Y, V[X]V[Y]", 
     value = "De la varianza de X por la varianza de Y, V[X]V[Y]", 
     label = structure("De la varianza de X por la varianza de Y, V[X]V[Y]", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Incorrecto. Intenta de nuevo!.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_c07c3fd", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2284a0f", 
     option = "Del valor esperado conjunto de X y Y , E[XY] ", 
     value = "Del valor esperado conjunto de X y Y , E[XY] ", 
     label = structure("Del valor esperado conjunto de X y Y , E[XY]", html = TRUE, class = c("html", 
@@ -499,7 +500,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz_3-1-answer", question = "quiz_3-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 65741619.9693867, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 2014850117.56176, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -507,22 +508,22 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz_4-1", question = structure("De la gráfica se puede afirmar", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_28cec75", 
+"character")), answers = list(structure(list(id = "lnr_ans_2e40f02", 
     option = "Existe una relación lineal positiva", value = "Existe una relación lineal positiva", 
     label = structure("Existe una relación lineal positiva", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Cerca, pero no…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b90db59", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a9877d7", 
     option = "Existe una relación lineal negativa", value = "Existe una relación lineal negativa", 
     label = structure("Existe una relación lineal negativa", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Nop…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_530fbc1", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f46664f", 
     option = "No existe una relación lineal", value = "No existe una relación lineal", 
     label = structure("No existe una relación lineal", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Incorrecto. Intenta de nuevo!.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ff046e3", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_29c6fbf", 
     option = "Existe relación no lineal", value = "Existe relación no lineal", 
     label = structure("Existe relación no lineal", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -533,30 +534,30 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz_4-1-answer", question = "quiz_4-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1971226524.58208, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1516659550.29375, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz_5-1", question = structure("Suponga que la correlación de Pearson entre dos variables es igual a 0.56. Podemos afirmar que:", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_e48ea37", 
+"character")), answers = list(structure(list(id = "lnr_ans_dd6262a", 
     option = "No existe una relación media entre las variables", 
     value = "No existe una relación media entre las variables", 
     label = structure("No existe una relación media entre las variables", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("No…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7828cf2", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_3a00865", 
     option = "La relación entre las variables es debil", value = "La relación entre las variables es debil", 
     label = structure("La relación entre las variables es debil", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Nop…intentalo de nuevo!", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1a0dde8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b9801ea", 
     option = "La relación entre las variables muy fuerte", value = "La relación entre las variables muy fuerte", 
     label = structure("La relación entre las variables muy fuerte", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Incorrecto. Intenta de nuevo!.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_37836b2", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_742152d", 
     option = "La la relación entre las variables es media", 
     value = "La la relación entre las variables es media", label = structure("La la relación entre las variables es media", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -567,7 +568,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz_5-1-answer", question = "quiz_5-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 400806229.31336, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 411704043.808285, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -582,9 +583,9 @@ output$`tutorial-exercise-p1-output` <- renderUI({
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::store_exercise_cache(structure(list(label = "p1", global_setup = structure(c("knitr::opts_chunk$set(echo = TRUE, comment = NA)", 
-"library(learnr)", "library(ggplot2)", "knitr::opts_chunk$set(echo = FALSE,", 
-"                 exercise.warn_invisible = FALSE)", "# colores", 
-"c1=\"#FF7F00\" # NARANJA COLOR PRINCIPAL", "c2=\"#034a94\" # AZUL FUERTE COLOR SECUNDARIO  ", 
+"library(paqueteMET)", "library(learnr)", "library(ggplot2)", 
+"knitr::opts_chunk$set(echo = FALSE,", "                 exercise.warn_invisible = FALSE)", 
+"# colores", "c1=\"#FF7F00\" # NARANJA COLOR PRINCIPAL", "c2=\"#034a94\" # AZUL FUERTE COLOR SECUNDARIO  ", 
 "c3=\"#0eb0c6\" # AZUL CLARO COLOR TERCEARIO  ", "c4=\"#686868\" # GRIS COLOR TEXTO ", 
 "#library(PerformanceAnalytics)", "#library(patchwork)", "#-----------------------------------------------", 
 "Theme1= theme(axis.text.x = element_blank(),", "        axis.text.y = element_blank(),", 
@@ -594,10 +595,10 @@ learnr:::store_exercise_cache(structure(list(label = "p1", global_setup = struct
 "y<- rho*x + sqrt(1-rho^2)*z", "result <-cbind(y,x)", "return(result)", 
 "}", "library(paqueteMOD)", "data(\"arboles\")", "##  <div class=\"content-box-blue\">    <\u002fdiv> ## caja azul"
 ), chunk_opts = list(label = "setup", include = FALSE)), setup = NULL, 
-    chunks = list(list(label = "p1", code = "library(paqueteMOD)\ndata(\"arboles\")\n", 
+    chunks = list(list(label = "p1", code = "library(paqueteMET)\ndata(\"arboles\")\n", 
         opts = list(label = "\"p1\"", exercise = "TRUE", exercise.lines = "5"), 
         engine = "r")), code_check = NULL, error_check = NULL, 
-    check = NULL, solution = structure(c("library(paqueteMOD)", 
+    check = NULL, solution = structure(c("library(paqueteMET)", 
     "data(\"arboles\")", "cor(arboles$peso,arboles$diametro)", 
     "cor(arboles$peso,arboles$altura)"), chunk_opts = list(label = "p1-solution")), 
     tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
@@ -617,7 +618,7 @@ learnr:::store_exercise_cache(structure(list(label = "p1", global_setup = struct
         message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
         engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
         max.print = 1000, exercise.warn_invisible = FALSE, label = "p1", 
-        exercise = TRUE, exercise.lines = 5, code = c("library(paqueteMOD)", 
+        exercise = TRUE, exercise.lines = 5, code = c("library(paqueteMET)", 
         "data(\"arboles\")", ""), out.width.px = 624, out.height.px = 384, 
         params.src = "p1, exercise=TRUE, exercise.lines = 5", 
         fig.num = 0, exercise.df_print = "paged", exercise.checker = "NULL"), 
@@ -635,9 +636,9 @@ output$`tutorial-exercise-p2-output` <- renderUI({
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::store_exercise_cache(structure(list(label = "p2", global_setup = structure(c("knitr::opts_chunk$set(echo = TRUE, comment = NA)", 
-"library(learnr)", "library(ggplot2)", "knitr::opts_chunk$set(echo = FALSE,", 
-"                 exercise.warn_invisible = FALSE)", "# colores", 
-"c1=\"#FF7F00\" # NARANJA COLOR PRINCIPAL", "c2=\"#034a94\" # AZUL FUERTE COLOR SECUNDARIO  ", 
+"library(paqueteMET)", "library(learnr)", "library(ggplot2)", 
+"knitr::opts_chunk$set(echo = FALSE,", "                 exercise.warn_invisible = FALSE)", 
+"# colores", "c1=\"#FF7F00\" # NARANJA COLOR PRINCIPAL", "c2=\"#034a94\" # AZUL FUERTE COLOR SECUNDARIO  ", 
 "c3=\"#0eb0c6\" # AZUL CLARO COLOR TERCEARIO  ", "c4=\"#686868\" # GRIS COLOR TEXTO ", 
 "#library(PerformanceAnalytics)", "#library(patchwork)", "#-----------------------------------------------", 
 "Theme1= theme(axis.text.x = element_blank(),", "        axis.text.y = element_blank(),", 
@@ -647,10 +648,10 @@ learnr:::store_exercise_cache(structure(list(label = "p2", global_setup = struct
 "y<- rho*x + sqrt(1-rho^2)*z", "result <-cbind(y,x)", "return(result)", 
 "}", "library(paqueteMOD)", "data(\"arboles\")", "##  <div class=\"content-box-blue\">    <\u002fdiv> ## caja azul"
 ), chunk_opts = list(label = "setup", include = FALSE)), setup = NULL, 
-    chunks = list(list(label = "p2", code = "library(paqueteMOD)\ndata(\"arboles\")\n", 
+    chunks = list(list(label = "p2", code = "library(paqueteMET)\ndata(\"arboles\")\n", 
         opts = list(label = "\"p2\"", exercise = "TRUE", exercise.lines = "5"), 
         engine = "r")), code_check = NULL, error_check = NULL, 
-    check = NULL, solution = structure(c("library(paqueteMOD)", 
+    check = NULL, solution = structure(c("library(paqueteMET)", 
     "data(\"arboles\")", "arboles=as.data.frame(arboles)", "cor.test(arboles$peso,arboles$diametro)", 
     "cor.test(arboles$peso, arboles$altura)"), chunk_opts = list(
         label = "p2-solution")), tests = NULL, options = list(
@@ -670,7 +671,7 @@ learnr:::store_exercise_cache(structure(list(label = "p2", global_setup = struct
         message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
         engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
         max.print = 1000, exercise.warn_invisible = FALSE, label = "p2", 
-        exercise = TRUE, exercise.lines = 5, code = c("library(paqueteMOD)", 
+        exercise = TRUE, exercise.lines = 5, code = c("library(paqueteMET)", 
         "data(\"arboles\")", ""), out.width.px = 624, out.height.px = 384, 
         params.src = "p2, exercise=TRUE, exercise.lines = 5", 
         fig.num = 0, exercise.df_print = "paged", exercise.checker = "NULL"), 
@@ -685,7 +686,7 @@ learnr:::store_exercise_cache(structure(list(label = "p2", global_setup = struct
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64]}},"value":[{"type":"character","attributes":{},"value":["backports","base","bslib","cachem","checkmate","cli","colorspace","commonmark","compiler","curl","datasets","digest","dplyr","ellipsis","evaluate","fansi","fastmap","fontawesome","generics","ggplot2","glue","graphics","grDevices","grid","gtable","highr","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","lifecycle","magrittr","markdown","methods","mime","munsell","paqueteMOD","pillar","pkgconfig","promises","R6","Rcpp","rlang","rmarkdown","rprojroot","rstudioapi","sass","scales","shiny","stats","tibble","tidyselect","tools","utf8","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.4.1","4.2.2","0.4.2.9000","1.0.7","2.1.0","3.6.1","2.1-0","1.9.0","4.2.2","5.0.0","4.2.2","0.6.31","1.1.1","0.3.2","0.20","1.0.4","1.1.1","0.5.0","0.1.3","3.4.1","1.6.2","4.2.2","4.2.2","4.2.2","0.3.3","0.10","0.5.5","1.6.2","1.6.9","0.1.4","1.8.4","1.42","1.3.0","0.11.3","1.0.3","2.0.3","1.5","4.2.2","0.12","0.5.0","0.0.0.1","1.9.0","2.0.3","1.2.0.1","2.5.1","1.0.10","1.1.0","2.21","2.0.3","0.14","0.4.5","1.2.1","1.7.4","4.2.2","3.2.1","1.2.0","4.2.2","1.2.3","4.2.2","0.6.1","2.5.0","0.38","1.8-4","2.3.7"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65]}},"value":[{"type":"character","attributes":{},"value":["backports","base","bslib","cachem","checkmate","cli","colorspace","commonmark","compiler","curl","datasets","digest","dplyr","ellipsis","evaluate","fansi","fastmap","fontawesome","generics","ggplot2","glue","graphics","grDevices","grid","gtable","highr","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","lifecycle","magrittr","markdown","methods","mime","munsell","paqueteMET","paqueteMOD","pillar","pkgconfig","promises","R6","Rcpp","rlang","rmarkdown","rprojroot","rstudioapi","sass","scales","shiny","stats","tibble","tidyselect","tools","utf8","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.4.1","4.2.2","0.4.2.9000","1.0.7","2.1.0","3.6.1","2.1-0","1.9.0","4.2.2","5.0.0","4.2.2","0.6.31","1.1.1","0.3.2","0.20","1.0.4","1.1.1","0.5.0","0.1.3","3.4.1","1.6.2","4.2.2","4.2.2","4.2.2","0.3.3","0.10","0.5.5","1.6.2","1.6.9","0.1.4","1.8.4","1.42","1.3.0","0.11.3","1.0.3","2.0.3","1.5","4.2.2","0.12","0.5.0","0.0.0.1","0.0.0.1","1.9.0","2.0.3","1.2.0.1","2.5.1","1.0.10","1.1.0","2.21","2.0.3","0.14","0.4.5","1.2.1","1.7.4","4.2.2","3.2.1","1.2.0","4.2.2","1.2.3","4.2.2","0.6.1","2.5.0","0.38","1.8-4","2.3.7"]}]}]}
 </script>
 <!--/html_preserve-->
 </div>

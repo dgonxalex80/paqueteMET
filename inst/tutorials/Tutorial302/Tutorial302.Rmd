@@ -261,14 +261,14 @@ quiz(
 La data `biomasa` contenida en `paqueteMOD` contiene información sobre la biomasa total y la altura de 90 árboles.  Estime el modelo $\text{biomasa} = \beta_{0} + \beta_{1} \text{altura} + \varepsilon$ mediante el método de mínimos cuadrados ordinarios (MCO)
 
 ```{r p1, exercise=TRUE, exercise.lines = 10}
-library(paqueteMOD)
+library(paqueteMET)
 data("biomasa")
 
 ```
 
 
 ```{r p1-hint}
-library(paqueteMOD)
+library(paqueteMET)
 data("biomasa")
 lm
 
@@ -276,7 +276,7 @@ lm
 
 
 ```{r p1-solution}
-library(paqueteMOD)
+library(paqueteMET)
 data("biomasa")
 modelo=lm(biomasa$bio_total ~ biomasa$altura)
 summary(modelo)
@@ -293,7 +293,7 @@ A partir de la data `biomasa` contenida en `paqueteMOD` contiene información so
 * $E[\varepsilon] = 0$
 
 ```{r p2, exercise=TRUE, exercise.lines = 20}
-library(paqueteMOD)
+library(paqueteMET)
 library(lmtest)
 data(biomasa)
 
@@ -301,7 +301,7 @@ data(biomasa)
 
 
 ```{r p2-hint}
-library(paqueteMOD)
+library(paqueteMET)
 library(lmtest)
 data(biomasa)
 shapiro.test()
@@ -312,7 +312,7 @@ t.test()
 
 
 ```{r p2-solution}
-library(paqueteMOD)
+library(paqueteMET)
 library(lmtest)
 data(biomasa)
 modelo=lm(biomasa$bio_total ~ biomasa$altura)
@@ -331,7 +331,7 @@ t.test(modelo$residuals)
 La data `biomasa` contenida en `paqueteMOD` contiene información sobre la biomasa total y la altura de 90 árboles.  Verifique el valor de $\lambda$ para la constante de la transformación Box-Cox para establecer la transformación apropiada de la variable dependiente en el modelo $\text{biomasa} = \beta_{0} + \beta_{1} \text{altura} + \varepsilon$ 
 
 ```{r p3, exercise=TRUE, exercise.lines = 20}
-library(paqueteMOD).
+library(paqueteMET).
 library(MASS)
 data(biomasa)
 
@@ -339,7 +339,7 @@ data(biomasa)
 
 
 ```{r p3-hint}
-library(paqueteMOD)
+library(paqueteMET)
 library(MASS)
 data(biomasa)
 boxcox()
@@ -349,7 +349,7 @@ boxcox()
 
 
 ```{r p3-solution}
-library(paqueteMOD)
+library(paqueteMET)
 library(MASS)
 data(biomasa)
 bc=boxcox(lm(biomasa$bio_total ~ biomasa$altura), lambda = -1:1)
@@ -364,7 +364,7 @@ Para el modelo  $\text{biomasa} = \beta_{0} + \beta_{1} \text{altura} + \varepsi
 
 
 ```{r p4, exercise=TRUE, exercise.lines = 20}
-library(paqueteMOD)
+library(paqueteMET)
 data(biomasa)
 modelo=lm(biomasa$bio_total ~ biomasa$altura)
 
@@ -372,7 +372,7 @@ modelo=lm(biomasa$bio_total ~ biomasa$altura)
 
 
 ```{r p4-hint}
-library(paqueteMOD)
+library(paqueteMET)
 data(biomasa)
 modelo=lm(biomasa$bio_total ~ biomasa$altura)
 
@@ -380,7 +380,7 @@ modelo=lm(biomasa$bio_total ~ biomasa$altura)
 
 
 ```{r p4-solution}
-library(paqueteMOD)
+library(paqueteMET)
 data(biomasa)
 modelo=lm(biomasa$bio_total ~ biomasa$altura)
 par(mfrow = c(2,2))

@@ -122,7 +122,7 @@ x=runif(1000,10,20)
 
 ```{r p1-hint}
 library(tidyverse)
-x=runif(1000,10,20)
+x = runif(1000,10,20)
 density(x) 
 
 ```
@@ -130,9 +130,9 @@ density(x)
 
 ```{r p1-solution}
 library(tidyverse)
-x=runif(1000,10,20)
+x = runif(1000,10,20)
 density(x) %>% 
-  plot(, main="Distribución unif(10,20")
+  plot(., main = "Distribución unif(10,20")
 ```
 
 

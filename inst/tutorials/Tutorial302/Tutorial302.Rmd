@@ -284,7 +284,7 @@ summary(modelo)
 
 
 
-### **Problema 2*
+### **Problema 2**
 A partir de la data `biomasa` contenida en `paqueteMOD` contiene información sobre la biomasa total y la altura de 90 árboles.  se puede estimar el modelo $\text{biomasa} = \beta_{0} + \beta_{1} \text{altura} + \varepsilon$ . A partir de los resultados obtenidos en la estimación valide los supuestos sobre los errores:
 
 * $\varepsilon \sim Normal$

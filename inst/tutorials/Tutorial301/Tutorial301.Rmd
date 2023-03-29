@@ -1,5 +1,5 @@
 ---
-title: "**ANALISIS DE CORRELACIÓN**"
+title: "**ANÁLISIS DE CORRELACIÓN**"
 author: Métodos y Simulación Estadística
 output: 
   learnr::tutorial:
@@ -240,7 +240,7 @@ quiz(
 
 Para el grupo de datos contenidos en la base arboles (data(arboles))  determine que variable (altura o diametro) tiene más relación con la variable peso. 
 
-```{r p1, exercise=TRUE, exercise.lines = 5}
+```{r p1, exercise=TRUE, exercise.lines = 15}
 library(paqueteMET)
 data("arboles")
 
@@ -269,7 +269,7 @@ cor(arboles$peso,arboles$altura)
 Realice las pruebas de hipótesis con las que pueda verificar si las correlaciones entre las variables : peso, diametro y altura son diferentes de cero
 
 
-```{r p2, exercise=TRUE, exercise.lines = 5}
+```{r p2, exercise=TRUE, exercise.lines = 15}
 library(paqueteMET)
 data("arboles")
 
@@ -294,182 +294,120 @@ cor.test(arboles$peso, arboles$altura)
 
 
 
-<!-- ### **Problema 3** -->
+### **Problema 3**
 
-<!-- La base de datos vivienda contenida en paqueteMET contiene las siguientes variables: -->
+La base de datos `vivienda`  contenida en `paqueteMET` contiene las siguientes variables: id, zona, piso, estrato, preciom, areaconst,  parqueaderos, banios, habitaciones, tipo,  barrio, longitud, latitud 
 
+Contruya las siguientes dataset que cumpla con la siguientes condiciones:
 
-<!-- Enunciado -->
+* casas : solo casas 
+* casasSUR : solo casas ubicadas en el sur de la ciudad
+* casasSUR56 : solo casas ubicadas en el sur de la ciudad, pertenecientes a los estratos 5 y 6
 
-<!-- ```{r p3, exercise=TRUE, exercise.lines = 5} -->
-<!-- library(paqueteMET) -->
-<!-- data("vivienda") -->
-<!-- summary(vivienda) -->
-<!-- ``` -->
+```{r p3, exercise=TRUE, exercise.lines = 15}
+library(paqueteMET)
+data("vivienda")
 
+```
 
-<!-- ```{r p3-hint} -->
 
+```{r p3-hint}
+library(paqueteMET)
+data("vivienda")
+casas = subset(vivienda, vivienda$tipo == "Casa")
 
-<!-- ``` -->
+```
 
 
-<!-- ```{r p3-solution} -->
+```{r p3-solution}
+library(paqueteMET)
+data("vivienda")
+casas = subset(vivienda, vivienda$tipo == "Casa")
+casaSUR = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
+```
 
-<!-- ``` -->
 
 
+### **Problema 4**
 
-<!-- ### **Problema 4** -->
 
-<!-- Enunciado -->
+La base de datos `vivienda`  contenida en `paqueteMET` contiene las siguientes variables: `id`, `zona`, `piso`, `estrato`, `preciom`, `areaconst`,  `parqueaderos`, `banios`, `habitaciones`, `tipo`,  `barrio`, `longitud`, `latitud` 
 
-<!-- ```{r p4, exercise=TRUE, exercise.lines = 5} -->
+Para las casas ubicadas en el sur de la ciudad que pertenecen al estrato 5 y 6, visualice la relación existente entre las variables : `preciom`, `areaconst`,  `parqueaderos`, `banios`, `habitaciones`
 
 
-<!-- ``` -->
 
+```{r p4, exercise=TRUE, exercise.lines = 15}
+library(paqueteMET)
+data("vivienda")
 
-<!-- ```{r p4-hint} -->
 
+```
 
-<!-- ``` -->
 
+```{r p4-hint}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
 
-<!-- ```{r p4-solution} -->
+```
 
-<!-- ``` -->
 
+```{r p4-solution}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
+GGally::ggpairs(casaSUR56[,5:9], title="Casas, ubicación sur, estratos 5 y 6") 
+```
 
 
-<!-- ### **Problema 5** -->
 
-<!-- Enunciado -->
+### **Problema 5**
 
-<!-- ```{r p5, exercise=TRUE, exercise.lines = 5} -->
 
+La base de datos `vivienda`  contenida en `paqueteMET` contiene las siguientes variables: `id`, `zona`, `piso`, `estrato`, `preciom`, `areaconst`,  `parqueaderos`, `banios`, `habitaciones`, `tipo`,  `barrio`, `longitud`, `latitud` 
 
-<!-- ``` -->
+Como se pudo observar la variable preciom, presenta asimetría a la derecha. Valida el cambio que ocurre cuando se transforma a través de la función logarítmica y 
+visualiza su relación con las variables : `areaconst`,  `parqueaderos`, `banios`, `habitaciones`
 
 
-<!-- ```{r p5-hint} -->
 
+```{r p5, exercise=TRUE, exercise.lines = 15}
+library(paqueteMET)
+data("vivienda")
 
-<!-- ``` -->
 
+```
 
-<!-- ```{r p5-solution} -->
 
-<!-- ``` -->
+```{r p5-hint}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
 
+```
 
 
-<!-- ### **Problema 6** -->
-<!-- Enunciado -->
+```{r p5-solution}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
+casaSUR56$lnpreciom = log(casaSUR56$preciom)
+GGally::ggpairs(casaSUR56[,c(14,7,8,9)], title="Casas, ubicación sur, estratos 5 y 6") 
+```
 
-<!-- ```{r p6, exercise=TRUE, exercise.lines = 5} -->
 
 
-<!-- ``` -->
 
 
-<!-- ```{r p6-hint} -->
 
 
-<!-- ``` -->
 
 
-<!-- ```{r p6-solution} -->
 
-<!-- ``` -->
 
 
 
-<!-- ### **Problema 7** -->
 
-<!-- Enunciado -->
 
-<!-- ```{r p7, exercise=TRUE, exercise.lines = 5} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p7-hint} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p7-solution} -->
-
-<!-- ``` -->
-
-
-
-<!-- ### **Problema 8** -->
-
-<!-- Enunciado -->
-
-<!-- ```{r p8, exercise=TRUE, exercise.lines = 5} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p8-hint} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p8-solution} -->
-
-<!-- ``` -->
-
-
-
-<!-- ### **Problema 9** -->
-
-<!-- Enunciado -->
-
-<!-- ```{r p9, exercise=TRUE, exercise.lines = 5} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p9-hint} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p9-solution} -->
-
-<!-- ``` -->
-
-
-
-<!-- ### **Problema 10** -->
-
-<!-- Enunciado -->
-
-<!-- ```{r p10, exercise=TRUE, exercise.lines = 5} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p10-hint} -->
-
-
-<!-- ``` -->
-
-
-<!-- ```{r p10-solution} -->
-
-<!-- ``` -->
-
-
- 

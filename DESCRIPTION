@@ -18,6 +18,7 @@ Imports:
     lmtest,
     MASS,
     psych,
+    stats,
     summarytools,
     tidyverse
 Suggests: 

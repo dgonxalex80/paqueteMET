@@ -71,7 +71,17 @@ S7. El modelo de regresión es: $Y_i = Y\vert X_i = E\left[Y \vert X_i\right] + 
 
 S8. Los errores se distribuyen $\large \varepsilon_{i}\sim N(0,\sigma^{2}), \hspace{0.8cm} i=1,2,\ldots,n$
 
-S9. Los errores aleatorios $\large \varepsilon_i$ son estadísticamente independientes.
+S9. Los errores aleatorios $\large \varepsilon_i$ son estadísticamente HOLA HERMANOS, BUENOS DÍAS.
+
+TENDREMOS ENSAYO DE CANTOS PARA LA VIGILIA PASCUAL.
+
+JUEVES 30 DE MARZO
+
+HORA: 7.00 P.M.
+
+SALÓN PARROQUIAL INMACULADO CORAZÓN DE MARIA (2o. PISO).
+
+GRACIAS.independientes.
 
 S10. La varianza de los errores es contante : $V[\varepsilon_{i}] = \sigma^{2}$
 
@@ -386,4 +396,127 @@ modelo=lm(biomasa$bio_total ~ biomasa$altura)
 par(mfrow = c(2,2))
 plot(modelo)
 ```
+
+
+
+
+
+### **Problema 5**
+
+La base de datos `vivienda`  contenida en `paqueteMET` contiene las siguientes variables: id, zona, piso, estrato, preciom, areaconst,  parqueaderos, banios, habitaciones, tipo,  barrio, longitud, latitud 
+
+Contruya las siguientes dataset que cumpla con la siguientes condiciones:
+
+* casas : solo casas 
+* casasSUR : solo casas ubicadas en el sur de la ciudad
+* casasSUR56 : solo casas ubicadas en el sur de la ciudad, pertenecientes a los estratos 5 y 6
+
+```{r p5, exercise=TRUE, exercise.lines = 15}
+library(paqueteMET)
+data("vivienda")
+
+```
+
+
+```{r p5-hint}
+library(paqueteMET)
+data("vivienda")
+casas = subset(vivienda, vivienda$tipo == "Casa")
+
+```
+
+
+```{r p5-solution}
+library(paqueteMET)
+data("vivienda")
+casas = subset(vivienda, vivienda$tipo == "Casa")
+casaSUR = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato>4)
+```
+
+
+
+### **Problema 6**
+
+
+La base de datos `vivienda`  contenida en `paqueteMET` contiene las siguientes variables: id, zona, piso, estrato, preciom, areaconst,  parqueaderos, banios, habitaciones, tipo,  barrio, longitud, latitud 
+
+Para las casas ubicadas en el sur de la ciudad que pertenecen al estrato 5 y 6 construya el siguiente modelo de regresión: preciom = f(areaconst)
+
+
+```{r p6, exercise=TRUE, exercise.lines = 15}
+library(paqueteMET)
+data("vivienda")
+
+
+```
+
+
+```{r p6-hint}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato > 4)
+
+```
+
+
+```{r p6-solution}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato > 4)
+modelo56 = lm(preciom ~ areaconst, data = vivienda)
+summary(modelo56)
+```
+
+
+
+### **Problema 7**
+
+La base de datos `vivienda`  contenida en `paqueteMET` contiene las siguientes variables: id, zona, piso, estrato, preciom, areaconst,  parqueaderos, banios, habitaciones, tipo,  barrio, longitud, latitud 
+
+Para el modelo  regresión: preciom = f(areaconst), construido para las casas ubicadas en el sur de la ciudad y pertenecientes a los estratos 5 y 6,  valide el cumplimiento de los supuestos
+
+* normalidad de los errores
+* varianza constante de los errores
+* independencia de los errores
+
+
+```{r p7, exercise=TRUE, exercise.lines = 15}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato > 4)
+modelo56 = lm(preciom ~ areaconst, data=vivienda)
+
+```
+
+
+```{r p7-hint}
+library(paqueteMET)
+data("vivienda")
+casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Sur" & vivienda$estrato > 4)
+modelo56 = lm(preciom ~ areaconst, data = vivienda)
+residuales56 = modelo56$residuals 
+nortest::ad.test(residuales56)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

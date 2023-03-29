@@ -133,7 +133,7 @@ quiz(
 ```
 
 
-### **Pregunta 2**
+### **Pregunta 2**Untitled
 
 la siguiente tabla resume los datos recogidos en una encuesta sobre calidad de vida. El estudio recogió información de 900 personas sobre:
 
@@ -166,7 +166,7 @@ quiz(
 
 ### **Pregunta 3**
 
-La siguiente información corresponde a la distribución de los atletas que perticiparon en la carrera 10K La Luz en Cali en el 2022.
+La siguiente información corresponde a la distribución de los atletas que participaron en la carrera 10K La Luz en Cali en el 2022.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(paqueteMET)

@@ -55,35 +55,25 @@ ${\beta_1}$ es la pendiente de la línea recta.
 
 #### **SUPUESTOS DE MODELO DE REGRESIÓN LINEAL SIMPLE**
 
-S1. La variable respuesta $Y$ es una variable aleatoria cuyos valores para valores específicos de una variable $X$
+$S_1$. La variable respuesta $Y$ es una variable aleatoria cuyos valores para valores específicos de una variable $X$
 
-S2. La variable $X$ no se considera una variable aleatoria
+$S_2$. La variable $X$ no se considera una variable aleatoria
 
-S3. Los datos observados ${(x_i,y_i),\ i=1,\ldots,n}$ son tomados en un rango, por fuera del cual no se deben realizar inferencias (no realizar extrapolación)
+$S_3$. Los datos observados ${(x_i,y_i),\ i=1,\ldots,n}$ son tomados en un rango, por fuera del cual no se deben realizar inferencias (no realizar extrapolación)
 
-S4. El modelo de regresión es lineal en los parámetros
+$S_4$. El modelo de regresión es lineal en los parámetros
 
-S5. Si la ecuación de regresión es correcta, las variaciones que no se explican por la ecuación corresponden a errores aleatorios
+$S_5$. Si la ecuación de regresión es correcta, las variaciones que no se explican por la ecuación corresponden a errores aleatorios
 
-S6. No existe correlación de errores $Cor[\varepsilon_{i},\varepsilon_{j}]= 0$
+$S_6$. No existe correlación de errores $Cor[\varepsilon_{i},\varepsilon_{j}]= 0$
 
-S7. El modelo de regresión es: $Y_i = Y\vert X_i = E\left[Y \vert X_i\right] + \varepsilon_i \hspace{.8cm} i=1,2,\ldots,n$
+$S_7$. El modelo de regresión es: $Y_i = Y\vert X_i = E\left[Y \vert X_i\right] + \varepsilon_i \hspace{.8cm} i=1,2,\ldots,n$
 
-S8. Los errores se distribuyen $\large \varepsilon_{i}\sim N(0,\sigma^{2}), \hspace{0.8cm} i=1,2,\ldots,n$
+$S_8$. Los errores se distribuyen $\large \varepsilon_{i}\sim N(0,\sigma^{2}), \hspace{0.8cm} i=1,2,\ldots,n$
 
-S9. Los errores aleatorios $\large \varepsilon_i$ son estadísticamente HOLA HERMANOS, BUENOS DÍAS.
+$S_9$. Los errores aleatorios $\large \varepsilon_i$ son estadísticamente independientes.
 
-TENDREMOS ENSAYO DE CANTOS PARA LA VIGILIA PASCUAL.
-
-JUEVES 30 DE MARZO
-
-HORA: 7.00 P.M.
-
-SALÓN PARROQUIAL INMACULADO CORAZÓN DE MARIA (2o. PISO).
-
-GRACIAS.independientes.
-
-S10. La varianza de los errores es contante : $V[\varepsilon_{i}] = \sigma^{2}$
+$S_{10}$. La varianza de los errores es contante : $V[\varepsilon_{i}] = \sigma^{2}$
 
 En resumen :
 $$
@@ -497,6 +487,8 @@ casaSUR56 = subset(vivienda, vivienda$tipo == "Casa" & vivienda$zona == "Zona Su
 modelo56 = lm(preciom ~ areaconst, data = vivienda)
 residuales56 = modelo56$residuals 
 nortest::ad.test(residuales56)
+lmtest::bgtest(modelo56)
+lmtest::dwtest(modelo56)
 
 ```
 

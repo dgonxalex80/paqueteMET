@@ -53,7 +53,7 @@ Estos indicadores permiten realizar comparaciones de un dato con respecto al gru
 |$Q_{2}$ percentil 50    |$X_{n \times 0.50}$                    |`quantile(x,0.50)`             |
 |$Q_{3}$ percentil 75    |$X_{n \times 0.75}$                    |`quantile(x,0.75)`             |
 |rango intercuartílico   |$Q_{3}-Q_{1}$                          |                               |
-
+|                        |                                       |                               |
 </br></br>
 
 #### **INDICADORES DE CENTRO**
@@ -69,6 +69,7 @@ Los indicadores de centro resumen en un solo número el conjunto de datos. Dentr
 |rango medio             | $rm=\dfrac{min\{x\}-max\{x\}}{2}$     | `max(x)-min(x)`               |
 |media geométrica        | $(x_{1} \times x_{2} \times x_{3} .... x_{n})^{1/n}$  |               |
 |media armónica          | $\dfrac{n}{\dfrac{1}{x_{1}}+\dfrac{1}{x_{2}}+\dfrac{1}{x_{3}}+...+\dfrac{1}{x_{n}}}$ |  |
+|                        |                                                                                      |  |
 
 </br></br>
 
@@ -83,6 +84,7 @@ Los indicdores de dispersión conforman un grupo de indicadores que miden la var
 |varianza                |$s^{2} = \dfrac{1}{n-1} \displaystyle\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}$  |`var(x)` 
 |desviación estandar     |$s = \sqrt{s^{2}}$                     |`sd(x)`                        |
 |coeficiente de variación|$cv= \dfrac{s}{\bar{x}} \times 100$ %  |`sd(x)/mean(x)*100`            |
+|                        |                                       |                               |
 
 </br></br>
 
@@ -94,7 +96,7 @@ Los indicadores de forma permiten analizar los datos respecto a su distribución
 |:-----------------------|:--------------------------------------|:------------------------------|
 |coeficiente de curtosis |$\displaystyle\dfrac{Q_{3}-Q_{1}}{P_{90}-P_{10}}$ |`rapportools::kurtosis(bpe$promedio)`|
 |coeficiente de asimetría|$\displaystyle\dfrac{3(\bar{x}-Me)}{s}$|`rapportools::skewness(bpe$promedio)`|
-
+|                        |                                       |                                     |
 
 Las siguientes funciones permiten un un conjunto de indicadores :
 
